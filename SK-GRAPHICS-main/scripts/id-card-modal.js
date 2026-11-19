@@ -35,7 +35,7 @@ let currentIDSelection = {
 };
 
 function openProductOptions(productName) {
-  if (productName === "ID Card") {
+  if (productName === "ID Card" || productName === "Custom ID Card + Lanyard") {
     // Build modal HTML dynamically for ID Card
     const body = document.getElementById("optionsBody");
     body.innerHTML = `

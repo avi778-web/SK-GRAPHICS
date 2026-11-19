@@ -447,6 +447,413 @@
     }
   </style>
 <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+<style id="skIdCardModalUpgradeStyles">
+  .idcard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .idcard-grid .option-group {
+    margin-bottom: 0;
+  }
+  .idcard-details-box {
+    background: #f8fbfd;
+    border: 1px solid #dce7ef;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 14px;
+  }
+  .idcard-details-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--primary-dark, #1e5580);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .idcard-input {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid var(--border, #e0e4e8);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+    margin-bottom: 10px;
+    color: var(--text, #2c2c2c);
+  }
+  .idcard-input:focus {
+    border-color: var(--primary, #2b76a6);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(43, 118, 166, 0.14);
+  }
+  .idcard-tier-note {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #11845b;
+  }
+  @media (max-width: 520px) {
+    .idcard-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script id="skIdCardModalUpgradeScript">
+  (() => {
+    const ID_CARD_PRICING = {
+      packages: {
+        'set': { label: 'ID Card + Branded Lanyard Set', baseUnit: 70 },
+        'card-only': { label: 'ID Card Only (Without Lanyard)', baseUnit: 45 },
+        'lanyard-only': { label: 'Branded Lanyard Only (Without Card)', baseUnit: 35 }
+      },
+      variants: {
+        'pvc-standard': { label: 'Standard PVC Card (800 Micron Glossy)', extraPerUnit: 0 },
+        'pvc-matte': { label: 'Matte Finish PVC Card (Double-Sided)', extraPerUnit: 10 },
+        'frosted-card': { label: 'Frosted / Transparent Premium Card', extraPerUnit: 20 },
+        'nfc-smart': { label: 'Smart NFC Tap ID Card (NTAG215)', extraPerUnit: 65 }
+      },
+      lanyards: {
+        '16mm-satin': { label: '16mm Satin Printed Lanyard + Metal Hook', extraPerUnit: 0 },
+        '20mm-nylon': { label: '20mm Heavy Multicolor Lanyard + Dog Hook', extraPerUnit: 10 },
+        'yoyo-reel': { label: 'Lanyard + Retractable Yo-Yo Badge Reel', extraPerUnit: 20 },
+        'none': { label: 'No Lanyard (Card Only)', extraPerUnit: 0 }
+      }
+    };
+
+    function getIdCardTierDiscountRate(qty) {
+      if (qty >= 500) return 0.25;
+      if (qty >= 250) return 0.20;
+      if (qty >= 100) return 0.15;
+      if (qty >= 50) return 0.10;
+      if (qty >= 25) return 0.05;
+      return 0;
+    }
+
+    window.openIdCardOptions = function openIdCardOptions() {
+      const cardMeta = {
+        packageType: 'ID Card + Branded Lanyard Set',
+        cardVariant: 'Standard PVC Card (800 Micron Glossy)',
+        lanyardStyle: '16mm Satin Printed Lanyard + Metal Hook',
+        lanyardColor: 'Navy Blue',
+        orientation: 'Vertical + Clear Plastic Holder',
+        quantity: 10,
+        unitPrice: 70,
+        tierDiscount: 0
+      };
+
+      window.__skActiveIdCardState = {
+        name: 'Custom ID Card + Lanyard',
+        isIdCard: true,
+        price: 700,
+        bundle: '10 pcs · ID Card + Branded Lanyard Set · Standard PVC Card · 16mm Satin Printed Lanyard (Navy Blue)',
+        requiresQuote: false,
+        idCardMeta: cardMeta
+      };
+
+      if (typeof selectedOption !== 'undefined') {
+        selectedOption = window.__skActiveIdCardState;
+      }
+
+      const titleEl = document.getElementById('optionsTitle');
+      const bodyEl = document.getElementById('optionsBody');
+      const overlayEl = document.getElementById('optionsOverlay');
+      if (!titleEl || !bodyEl || !overlayEl) return;
+
+      titleEl.textContent = 'Custom ID Card + Lanyard options';
+      bodyEl.innerHTML = `
+        <div class="option-group">
+          <label for="idPackageType">Package / Set Type</label>
+          <select class="option-select" id="idPackageType" onchange="onIdCardPackageChange()">
+            <option value="set">ID Card + Branded Lanyard Set (₹70/set base)</option>
+            <option value="card-only">ID Card Only — Without Lanyard (₹45/pc base)</option>
+            <option value="lanyard-only">Branded Lanyard Only — Without Card (₹35/pc base)</option>
+          </select>
+        </div>
+
+        <div class="idcard-grid">
+          <div class="option-group" id="idVariantGroup">
+            <label for="idCardVariant">Card Type / Finish</label>
+            <select class="option-select" id="idCardVariant" onchange="updateIdCardPrice()">
+              <option value="pvc-standard">Standard PVC (800 Micron) · Included</option>
+              <option value="pvc-matte">Matte Double-Sided PVC (+₹10/pc)</option>
+              <option value="frosted-card">Frosted / Transparent Card (+₹20/pc)</option>
+              <option value="nfc-smart">Smart NFC Tap ID Card (+₹65/pc)</option>
+            </select>
+          </div>
+
+          <div class="option-group">
+            <label for="idQuantity">Quantity &amp; Bulk Tier</label>
+            <select class="option-select" id="idQuantity" onchange="updateIdCardPrice()">
+              <option value="10">10 Pieces (Starter Pack)</option>
+              <option value="25">25 Pieces (5% Bulk Off)</option>
+              <option value="50">50 Pieces (10% Bulk Off)</option>
+              <option value="100">100 Pieces (15% Bulk Off)</option>
+              <option value="250">250 Pieces (20% Bulk Off)</option>
+              <option value="500">500+ Pieces (25% Bulk Off)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="idcard-grid" id="idLanyardRow">
+          <div class="option-group">
+            <label for="idLanyardStyle">Lanyard / Strap Option</label>
+            <select class="option-select" id="idLanyardStyle" onchange="updateIdCardPrice()">
+              <option value="16mm-satin">16mm Satin Printed + Metal Hook (Included)</option>
+              <option value="20mm-nylon">20mm Heavy Multicolor + Dog Hook (+₹10/pc)</option>
+              <option value="yoyo-reel">Printed Lanyard + Yo-Yo Badge Reel (+₹20/pc)</option>
+              <option value="none">Without Lanyard (Card Only)</option>
+            </select>
+          </div>
+
+          <div class="option-group">
+            <label for="idLanyardColor">Lanyard Strap Color</label>
+            <select class="option-select" id="idLanyardColor" onchange="updateIdCardPrice()">
+              <option value="Navy Blue">Navy Blue</option>
+              <option value="Royal Blue">Royal Blue</option>
+              <option value="Jet Black">Jet Black</option>
+              <option value="Crimson Red">Crimson Red</option>
+              <option value="Emerald Green">Emerald Green</option>
+              <option value="White">White</option>
+              <option value="Custom Brand Color">Custom Brand Color</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label for="idOrientation">Card Orientation &amp; Holder</label>
+          <select class="option-select" id="idOrientation" onchange="updateIdCardPrice()">
+            <option value="Vertical + Clear Plastic Holder">Vertical (Portrait) + Clear Protective Holder</option>
+            <option value="Horizontal + Clear Plastic Holder">Horizontal (Landscape) + Clear Protective Holder</option>
+            <option value="Vertical Direct Slot Punch (No Holder)">Vertical Direct Slot Punch (No Plastic Holder)</option>
+            <option value="Horizontal Direct Slot Punch (No Holder)">Horizontal Direct Slot Punch (No Plastic Holder)</option>
+          </select>
+        </div>
+
+        <p class="idcard-tier-note" id="idCardTierNote" aria-live="polite"></p>
+
+        <div class="custom-fields">
+          <label class="custom-check">
+            <input type="checkbox" id="hasDesign" onchange="toggleUploadField('designUpload', this.checked)">
+            <span><strong>Already Have Your Design?</strong><small> Upload PNG, JPG, PDF, AI or PSD artwork if print-ready.</small></span>
+          </label>
+          <label class="upload-zone" id="designUpload" hidden>
+            Choose your ready design file
+            <input type="file" id="designFile" accept="image/png,image/jpeg,image/webp,application/pdf,.ai,.psd" onchange="readCustomizationFile('designFile','designFileData','designPreview')">
+          </label>
+          <input type="hidden" id="designFileData">
+          <div class="file-preview" id="designPreview"></div>
+
+          <label class="custom-check">
+            <input type="checkbox" id="addExtraAsset" onchange="toggleUploadField('extraUpload', this.checked)">
+            <span><strong>Add Extra Photo or Logo?</strong><small> Upload company/school logo, staff photo or brand mark.</small></span>
+          </label>
+          <label class="upload-zone" id="extraUpload" hidden>
+            Choose photo or logo
+            <input type="file" id="extraFile" accept="image/png,image/jpeg,image/webp,application/pdf,.ai,.psd" onchange="readCustomizationFile('extraFile','extraFileData','extraPreview')">
+          </label>
+          <input type="hidden" id="extraFileData">
+          <div class="file-preview" id="extraPreview"></div>
+
+          <label for="fontStyle">
+            <strong>Font style</strong>
+            <select id="fontStyle" class="option-select">
+              <option>Arial</option>
+              <option>Cursive / Brush Script</option>
+              <option>Times New Roman</option>
+              <option>Montserrat</option>
+              <option>Poppins</option>
+              <option>Roboto</option>
+              <option>Great Vibes</option>
+              <option>Courier New</option>
+              <option>Georgia</option>
+              <option>Verdana</option>
+              <option>Comic Sans MS</option>
+              <option>Impact</option>
+            </select>
+          </label>
+
+          <div class="idcard-details-box">
+            <div class="idcard-details-title"><i class="fas fa-id-badge" aria-hidden="true"></i> ID Card &amp; Lanyard Print Details</div>
+            <input type="text" id="idOrgName" class="idcard-input" maxlength="140" placeholder="Company / School / Organization Name">
+            <div class="idcard-grid" style="margin-bottom:0">
+              <input type="text" id="idHolderName" class="idcard-input" maxlength="120" placeholder="Name(s) to print (e.g. Suraj Kumar)">
+              <input type="text" id="idHolderRole" class="idcard-input" maxlength="120" placeholder="Designation / Employee ID / Roll No.">
+            </div>
+            <label for="printText" style="display:block;margin-top:4px"><strong>Additional Card / Lanyard Details</strong></label>
+            <textarea id="printText" placeholder="Type names, phone numbers, blood group, address, or lanyard text..."></textarea>
+          </div>
+        </div>
+      `;
+
+      window.updateIdCardPrice();
+      overlayEl.classList.add('open');
+      if (typeof syncOverlayScrollLock === 'function') syncOverlayScrollLock();
+    };
+
+    window.onIdCardPackageChange = function onIdCardPackageChange() {
+      const pkg = document.getElementById('idPackageType')?.value || 'set';
+      const variantGroup = document.getElementById('idVariantGroup');
+      const lanyardRow = document.getElementById('idLanyardRow');
+      const lanyardStyle = document.getElementById('idLanyardStyle');
+
+      if (variantGroup) variantGroup.hidden = (pkg === 'lanyard-only');
+      if (lanyardRow) lanyardRow.hidden = (pkg === 'card-only');
+      if (pkg === 'card-only' && lanyardStyle) lanyardStyle.value = 'none';
+      if (pkg !== 'card-only' && lanyardStyle && lanyardStyle.value === 'none') {
+        lanyardStyle.value = '16mm-satin';
+      }
+
+      window.updateIdCardPrice();
+    };
+
+    window.updateIdCardPrice = function updateIdCardPrice() {
+      const pkgKey = document.getElementById('idPackageType')?.value || 'set';
+      const variantKey = document.getElementById('idCardVariant')?.value || 'pvc-standard';
+      const lanyardKey = document.getElementById('idLanyardStyle')?.value || '16mm-satin';
+      const lanyardColor = document.getElementById('idLanyardColor')?.value || 'Navy Blue';
+      const orientation = document.getElementById('idOrientation')?.value || 'Vertical + Clear Plastic Holder';
+      const qty = Math.max(10, Number(document.getElementById('idQuantity')?.value || 10));
+
+      const effectivePkgKey = (pkgKey === 'set' && lanyardKey === 'none') ? 'card-only' : pkgKey;
+      const pkg = ID_CARD_PRICING.packages[effectivePkgKey] || ID_CARD_PRICING.packages.set;
+      const variant = effectivePkgKey === 'lanyard-only'
+        ? { label: 'No Card', extraPerUnit: 0 }
+        : (ID_CARD_PRICING.variants[variantKey] || ID_CARD_PRICING.variants['pvc-standard']);
+      const lanyard = effectivePkgKey === 'card-only'
+        ? ID_CARD_PRICING.lanyards.none
+        : (ID_CARD_PRICING.lanyards[lanyardKey] || ID_CARD_PRICING.lanyards['16mm-satin']);
+
+      const rawUnitPrice = pkg.baseUnit + variant.extraPerUnit + lanyard.extraPerUnit;
+      const discountRate = getIdCardTierDiscountRate(qty);
+      const discountedUnitPrice = Math.max(1, Math.round(rawUnitPrice * (1 - discountRate)));
+      const total = discountedUnitPrice * qty;
+      const saved = Math.max(0, (rawUnitPrice * qty) - total);
+
+      const summaryParts = [
+        `${qty} pcs`,
+        pkg.label,
+        effectivePkgKey !== 'lanyard-only' ? variant.label.split(' (')[0] : null,
+        effectivePkgKey !== 'card-only' ? `${lanyard.label.split(' (')[0]} (${lanyardColor})` : null
+      ].filter(Boolean);
+
+      const updatedState = {
+        name: 'Custom ID Card + Lanyard',
+        isIdCard: true,
+        price: total,
+        bundle: summaryParts.join(' · '),
+        requiresQuote: false,
+        idCardMeta: {
+          packageType: pkg.label,
+          cardVariant: variant.label,
+          lanyardStyle: lanyard.label,
+          lanyardColor: effectivePkgKey === 'card-only' ? 'None' : lanyardColor,
+          orientation,
+          quantity: qty,
+          unitPrice: discountedUnitPrice,
+          tierDiscount: saved
+        }
+      };
+
+      window.__skActiveIdCardState = updatedState;
+      if (typeof selectedOption !== 'undefined' && selectedOption?.isIdCard) {
+        selectedOption = updatedState;
+      }
+
+      const note = document.getElementById('idCardTierNote');
+      if (note) {
+        note.textContent = saved > 0
+          ? `₹${discountedUnitPrice}/pc · Bulk savings: ₹${saved} off`
+          : `₹${discountedUnitPrice}/pc · Select 25+ pieces for bulk discount`;
+      }
+
+      if (typeof updateOptionsPrice === 'function') {
+        updateOptionsPrice();
+      } else {
+        const priceEl = document.getElementById('optionsPrice');
+        if (priceEl) priceEl.textContent = `₹${total}`;
+      }
+    };
+
+    function confirmIdCardSelection() {
+      const state = window.__skActiveIdCardState || (typeof selectedOption !== 'undefined' ? selectedOption : null);
+      if (!state || !state.isIdCard) return false;
+
+      const meta = state.idCardMeta || {};
+      const orgName = document.getElementById('idOrgName')?.value.trim() || '';
+      const holderName = document.getElementById('idHolderName')?.value.trim() || '';
+      const holderRole = document.getElementById('idHolderRole')?.value.trim() || '';
+      const notes = document.getElementById('printText')?.value.trim() || '';
+
+      const combinedPrintText = [
+        orgName ? `Organization/School: ${orgName}` : '',
+        holderName ? `Name: ${holderName}` : '',
+        holderRole ? `Designation/ID: ${holderRole}` : '',
+        meta.orientation ? `Orientation: ${meta.orientation}` : '',
+        notes ? `Details: ${notes}` : ''
+      ].filter(Boolean).join(' | ');
+
+      const customization = {
+        hasDesign: Boolean(document.getElementById('hasDesign')?.checked),
+        addExtraAsset: Boolean(document.getElementById('addExtraAsset')?.checked),
+        fontStyle: document.getElementById('fontStyle')?.value || 'Arial',
+        printText: combinedPrintText.slice(0, 2000),
+        designFile: document.getElementById('designFileData')?.value || '',
+        extraAsset: document.getElementById('extraFileData')?.value || '',
+        options: meta,
+        tierDiscount: meta.tierDiscount || 0
+      };
+
+      if (typeof addToCart === 'function') {
+        addToCart(state.name, state.price, state.bundle, customization);
+      }
+      if (typeof closeProductOptions === 'function') {
+        closeProductOptions();
+      } else {
+        document.getElementById('optionsOverlay')?.classList.remove('open');
+      }
+      window.__skActiveIdCardState = null;
+      return true;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const idCardAnchor = document.querySelector('a.id-card-lanyard-card');
+      if (idCardAnchor) {
+        idCardAnchor.removeAttribute('href');
+        idCardAnchor.style.cursor = 'pointer';
+        idCardAnchor.setAttribute('role', 'button');
+        idCardAnchor.setAttribute('tabindex', '0');
+        idCardAnchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.openIdCardOptions();
+        });
+        idCardAnchor.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.openIdCardOptions();
+          }
+        });
+      }
+
+      if (typeof window.confirmProductOption === 'function' && !window.confirmProductOption.__skIdCardWrapped) {
+        const originalConfirm = window.confirmProductOption;
+        const wrappedConfirm = function wrappedConfirmProductOption(...args) {
+          if (window.__skActiveIdCardState?.isIdCard || (typeof selectedOption !== 'undefined' && selectedOption?.isIdCard)) {
+            return confirmIdCardSelection();
+          }
+          return originalConfirm.apply(this, args);
+        };
+        wrappedConfirm.__skIdCardWrapped = true;
+        window.confirmProductOption = wrappedConfirm;
+      }
+    });
+  })();
+</script>
 </head>
 <body>
 
