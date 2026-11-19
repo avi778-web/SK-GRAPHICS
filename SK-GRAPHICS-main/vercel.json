@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{views,assets,src,node_modules/mongoose/lib}/**"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ]
+}

@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SK Graphics | Online Printing Services | Delhi, Noida, India</title>
+  <meta name="description" content="SK Graphics is a one-stop print shop in Delhi-India. We print business cards, flyers, brochures, stickers, boxes, folders, notebooks and more.">
+  <meta name="keywords" content="Online printing India, business card, flyers printing, brochures, letterheads, fancy boxes, folders, notebooks, canvas, custom mugs, t-shirts, Stickers, Envelopes, pillow printing, rollup printing India">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" as="image" href="/assets/sk-hero-online-print-shop.png" fetchpriority="high">
+  <style>
+    /* RESET & BASE */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Raleway', 'Open Sans', sans-serif; color: #333; background: #fff; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    :is(a, button, input, select, textarea):focus-visible { outline: 3px solid rgba(245,124,31,.55); outline-offset: 2px; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    /* VARIABLES */
+    :root {
+      --primary:      #2b76a6;
+      --primary-dark: #1e5580;
+      --accent:       #f57c1f;
+      --accent-dark:  #d96a0e;
+      --text:         #2c2c2c;
+      --text-light:   #666;
+      --text-muted:   #999;
+      --bg-light:     #f8f9fa;
+      --border:       #e0e4e8;
+      --radius:       6px;
+      --radius-lg:    12px;
+      --shadow:       0 2px 15px rgba(0,0,0,.08);
+      --shadow-hov:   0 8px 30px rgba(43,118,166,.18);
+      --wp-green:     #25d366;
+    }
+
+    /* UTILITY */
+    .container      { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+    .container-fluid{ width: 100%; padding: 0 24px; }
+    .section-pad    { padding: 70px 0; }
+    .text-center    { text-align: center; }
+    .d-flex         { display: flex; }
+    .align-center   { align-items: center; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      padding: 11px 26px; border-radius: var(--radius); font-weight: 700;
+      font-size: 14px; cursor: pointer; transition: all .25s ease;
+      border: 2px solid transparent; letter-spacing: .3px; font-family: inherit;
+      white-space: nowrap;
+    }
+    .btn-primary  { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn-primary:hover  { background: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(43,118,166,.35); }
+    .btn-accent   { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-accent:hover   { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(245,124,31,.35); }
+    .btn-white    { background: #fff; color: var(--primary); border-color: #fff; }
+    .btn-white:hover    { background: #f0f7ff; }
+    .btn-outline-white  { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+    .btn-outline-white:hover { background: rgba(255,255,255,.15); }
+    .btn-wp { background: var(--wp-green); color: #fff; border-color: var(--wp-green); font-size: 15px; padding: 12px 28px; }
+    .btn-wp:hover { background: #1fba57; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,211,102,.4); }
+
+    /* Headings */
+    .section-tag {
+      display: inline-block; background: rgba(43,118,166,.1); color: var(--primary);
+      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 12px;
+    }
+    .section-title    { font-size: 28px; font-weight: 800; color: var(--text); margin-bottom: 10px; line-height: 1.25; }
+    .section-subtitle { font-size: 15px; color: var(--text-light); margin-bottom: 40px; line-height: 1.6; }
+    .section-header   { text-align: center; }
+
+    /* ANNOUNCEMENT BAR */
+    .ann-bar {
+      background: #1a2a3a; color: #fff; text-align: center;
+      padding: 9px 20px; font-size: 13px; font-weight: 500;
+      display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+    }
+    .ann-bar a { color: #ffd166; font-weight: 700; }
+    .ann-bar strong { color: #ffd166; }
+
+    /* TOP BAR */
+    .top-bar {
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 7px 0; font-size: 13px;
+    }
+    .top-bar-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .top-contact   { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .top-contact p { margin: 0; display: flex; align-items: center; gap: 7px; color: var(--text-light); }
+    .top-contact a { color: var(--text); font-weight: 700; }
+    .top-contact a:hover { color: var(--primary); }
+    .top-contact i { color: var(--primary); }
+    .top-links { display: flex; align-items: center; gap: 4px; }
+    .top-links a {
+      color: var(--text-light); font-size: 13px; font-weight: 500;
+      padding: 5px 11px; border-radius: 4px; transition: all .2s;
+    }
+    .top-links a:hover { background: var(--bg-light); color: var(--primary); }
+    .top-links .tl-quote {
+      background: var(--accent); color: #fff; font-weight: 700;
+      padding: 5px 14px; border-radius: 4px;
+    }
+
+    /* HEADER */
+    .main-header {
+      background: #fff; border-bottom: 2px solid var(--border);
+      position: sticky; top: 0; z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    .hdr-inner {
+      display: flex; align-items: center; gap: 18px;
+      padding: 12px 24px; max-width: 1340px; margin: 0 auto;
+    }
+    .sk-logo {
+      display: flex; flex-direction: column; line-height: 1;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .sk-logo .sk-name {
+      font-size: 24px; font-weight: 800; color: var(--primary);
+      letter-spacing: -.5px; white-space: nowrap;
+    }
+    .sk-logo .sk-sub {
+      font-size: 10.5px; color: var(--accent); font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; white-space: nowrap;
+    }
+
+    /* NAV */
+    .main-nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+    .ni { position: relative; }
+    .ni > a {
+      display: flex; align-items: center; gap: 4px; padding: 10px 13px;
+      font-size: 13.5px; font-weight: 700; color: var(--text); border-radius: 5px;
+      transition: all .2s; white-space: nowrap;
+    }
+    .ni > a i { font-size: 10px; transition: transform .2s; }
+    .ni > a:hover, .ni:hover > a { color: var(--primary); background: rgba(43,118,166,.07); }
+    .ni:hover > a i { transform: rotate(180deg); }
+
+    .mega-dd {
+      display: none; position: absolute; top: 100%; left: 0;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.13);
+      min-width: 780px; z-index: 9999; overflow: hidden;
+    }
+    .ni:hover .mega-dd { display: flex; }
+    .mega-left { width: 220px; background: var(--bg-light); border-right: 1px solid var(--border); flex-shrink: 0; }
+    .mega-left li a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; font-size: 13px; font-weight: 700; color: var(--text); transition: all .2s;
+    }
+    .mega-left li a:hover, .mega-left li.act a {
+      background: #fff; color: var(--primary); border-right: 3px solid var(--primary);
+    }
+    .mega-right { flex: 1; padding: 22px 26px; min-width: 0; }
+    .sub-panel { display: none; }
+    .sub-panel.act { display: block; }
+    .sub-panel h6 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); margin-bottom: 14px; font-weight: 800; }
+    .prod-links { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 20px; }
+    .prod-links a {
+      display: block; padding: 7px 10px; font-size: 13px; color: var(--text-light);
+      border-radius: 4px; transition: all .2s; font-weight: 500;
+    }
+    .prod-links a:hover { background: rgba(43,118,166,.08); color: var(--primary); padding-left: 16px; }
+
+ .hdr-search { position: relative; flex: 0 1 360px; width: min(360px, 100%); max-width: 360px; transition: flex-basis .3s ease, max-width .3s ease; }
+ .hdr-search input { width: 100%; height: 46px; padding: 9px 54px 9px 16px; border: 1px solid #e2e8f0; border-radius: 999px; background: #f1f5f9; color: #1e293b; font-size: 13.5px; outline: none; font-family: inherit; transition: all .2s ease; }
+ .hdr-search input::placeholder { color: #94a3b8; }
+ .hdr-search input:hover { border-color: #cbd5e1; }
+ .hdr-search input:focus { border-color: #3b82f6; background: #fff; box-shadow: 0 0 0 3px rgba(59,130,246,.18); }
+ .hdr-search.search-active { position: relative; z-index: 1110; max-width: 100%; }
+ .hdr-search.search-active input { width: 100%; box-shadow: 0 8px 24px rgba(15,23,42,.14); }
+    .search-clear { position: absolute; right: 48px; top: 0; height: 100%; width: 42px; border: 0; background: transparent; color: var(--text-light); cursor: pointer; display: none; }
+    .hdr-search.has-query .search-clear, .hdr-search.search-active .search-clear { display: block; }
+    .search-suggestions { position: fixed; top: 80px; left: 50%; width: min(520px, calc(100vw - 24px)); transform: translateX(-50%); max-height: min(420px, 60vh); overflow-y: auto; display: none; padding: 8px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 16px 40px rgba(15,23,42,.16); z-index: 5000; }
+    .hdr-search.search-active .search-suggestions { display: block; }
+    .search-suggestion { display: flex; width: 100%; min-height: 48px; gap: 10px; align-items: center; padding: 8px 12px; border: 0; border-radius: 9px; background: transparent; text-align: left; cursor: pointer; font: inherit; color: var(--text); }
+    .search-suggestion:hover, .search-suggestion:focus-visible { background: var(--bg-light); outline: none; }
+    .search-suggestion small { display: block; color: var(--text-light); font-size: 11px; }
+    .search-history-heading { padding: 7px 12px 4px; color: var(--text-light); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .search-history-heading-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .search-history-clear { border:0; background:transparent; color:var(--primary); cursor:pointer; font:inherit; font-size:10px; font-weight:800; letter-spacing:0; text-transform:none; }
+    .search-history-clear:hover { text-decoration:underline; }
+    .search-history-item { display:flex; align-items:center; gap:8px; padding:4px; border-radius:10px; }
+    .search-history-item:hover, .search-history-item:focus-within { background:var(--bg-light); }
+    .search-history-query { display:flex; align-items:center; gap:9px; flex:1; min-width:0; border:0; background:transparent; color:var(--text); padding:8px; text-align:left; font:inherit; cursor:pointer; }
+    .search-history-query span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .search-history-query i { color:var(--text-light); font-size:12px; }
+    .search-history-remove { width:28px; height:28px; border:0; border-radius:50%; background:transparent; color:var(--text-light); cursor:pointer; }
+    .search-history-remove:hover, .search-history-remove:focus-visible { background:#fee2e2; color:#b91c1c; }
+    .search-no-result { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:48px; padding:8px 12px; color:var(--text-light); font-size:13px; }
+    .search-no-result button { border:0; background:var(--bg-light); color:var(--primary); border-radius:999px; padding:6px 10px; font:inherit; font-weight:700; cursor:pointer; }
+    .search-results-note { display: none; margin: -24px 0 24px; color: var(--text-light); font-size: 14px; text-align: center; }
+    .search-results-note.visible { display: block; }
+    .cat-card.search-hidden { display: none; }
+    .search-results-active .cats-grid { grid-template-columns: 1fr; max-width: 980px; margin-left: auto; margin-right: auto; }
+    .search-results-active .cat-card { display: grid; grid-template-columns: 180px 1fr auto; align-items: center; text-align: left; gap: 20px; }
+    .search-results-active .cat-card .cat-icon { margin: 0; }
+    .search-backdrop { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.58); z-index: 1000; }
+    .search-backdrop[aria-hidden="false"] { display: block; }
+    .mobile-nav-overlay { display:none; position:fixed; inset:0; background:rgba(15,23,42,.45); z-index:1200; }
+    .mobile-nav-overlay.open { display:block; }
+    .mobile-nav-drawer { width:min(320px,86vw); height:100%; padding:24px; background:#fff; box-shadow:8px 0 30px rgba(15,23,42,.18); display:flex; flex-direction:column; gap:8px; }
+    .mobile-nav-drawer a { min-height:48px; display:flex; align-items:center; padding:12px 14px; border-radius:8px; color:var(--text); font-weight:700; }
+    .mobile-nav-drawer a:hover { background:var(--bg-light); color:var(--primary); }
+    .mobile-nav-close { align-self:flex-end; border:0; background:transparent; font-size:30px; line-height:1; color:var(--text-light); cursor:pointer; padding:8px; }
+    body.search-mode .search-backdrop { display:block; pointer-events:none; }
+    body.search-mode .ann-bar, body.search-mode .main-header .sk-logo, body.search-mode .main-header .main-nav, body.search-mode .main-header .hdr-icons, body.search-mode .main-header .mob-toggle { visibility:hidden; }
+    body.search-mode .main-header { position:relative; z-index:2000; background:transparent; border:0; }
+    body.search-mode .hdr-search { visibility:visible; }
+    .first-order-badge { margin-top:10px; padding:10px 12px; border-radius:8px; background:#ecfdf3; color:#087443; font-size:13px; font-weight:700; }
+    .btn.is-loading { opacity:.7; cursor:wait; }
+    .btn.is-loading::before { content:''; width:15px; height:15px; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:spin .7s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+    .hdr-search button {
+      position: absolute; right: 0; top: 0; height: 100%; padding: 0 14px;
+      background: var(--primary); border: none; border-radius: 0 25px 25px 0;
+      color: #fff; cursor: pointer;
+    }
+
+    .hdr-icons { display: flex; align-items: center; gap: 4px; }
+    .hdr-icon-btn {
+      display: flex; align-items: center; gap: 5px; padding: 8px 11px;
+      border-radius: 7px; font-size: 13px; color: var(--text);
+      cursor: pointer; background: none; border: none; font-family: inherit; position: relative;
+    }
+    .hdr-icon-btn i { font-size: 18px; }
+    .hdr-icon-btn:hover { background: var(--bg-light); color: var(--primary); }
+    .hdr-icon-btn .badge {
+      position: absolute; top: 4px; right: 4px;
+      background: var(--accent); color: #fff;
+      border-radius: 50%; width: 17px; height: 17px;
+      font-size: 10px; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; line-height: 1;
+    }
+
+    .mob-toggle {
+      display: none; background: none; border: 1.5px solid var(--border);
+      border-radius: 6px; cursor: pointer; padding: 7px 9px;
+      flex-direction: column; gap: 5px; flex-shrink: 0;
+    }
+    .mob-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+
+    /* HERO BANNER */
+    .hero { position: relative; overflow: hidden; width: 100%; background: #0074b7; }
+    .hero-banner-wrapper {
+      width: 100%;
+      position: relative;
+      display: block;
+    }
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* FEATURES BAR */
+    .feat-bar { background: var(--primary); }
+    .feat-bar-inner { display: flex; align-items: stretch; flex-wrap: wrap; }
+    .feat-item {
+      flex: 1; min-width: 180px; display: flex; align-items: center; gap: 14px;
+      padding: 18px 22px; color: #fff; border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .feat-item:last-child { border-right: none; }
+    .feat-item i { font-size: 24px; opacity: .9; flex-shrink: 0; }
+    .feat-item h6 { font-size: 13.5px; font-weight: 700; margin-bottom: 2px; }
+    .feat-item p { font-size: 12px; opacity: .8; margin: 0; }
+
+    /* PRODUCT CARDS */
+    .cats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 20px;
+    }
+    .cat-card {
+      background: #fff; border: 2px solid transparent; border-radius: var(--radius);
+      overflow: hidden; cursor: pointer; transition: .25s; box-shadow: var(--shadow);
+    }
+    .cat-card:hover, .cat-card:focus-within { transform: translateY(-6px); box-shadow: var(--shadow-hov); border-color: #f2c94c; }
+ .cat-circle-badge { position:absolute; right:12px; bottom:12px; width:50px; height:50px; border-radius:50%; background:#111; border:2px solid #fff; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.34); z-index:2; }
+ .cat-circle-badge img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+    .cat-img {
+      height: 165px; display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
+      background: #f4f7f9;
+    }
+    .cat-img img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 0;
+      transition: transform .35s ease, filter .35s ease;
+    }
+    .cat-card:hover .cat-img img { transform: scale(1.06); filter: saturate(1.08); }
+
+    .cat-body { padding: 15px 17px 17px; }
+    .cat-body h5 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+    .cat-body p { font-size: 12.5px; color: var(--text-light); margin-bottom: 12px; line-height: 1.55; }
+    .cat-body .cat-link { font-size: 13px; font-weight: 700; color: var(--primary); display: inline-flex; align-items: center; gap: 5px; border: 1px solid rgba(43,118,166,.25); padding: 7px 10px; border-radius: 8px; background: #f5fbff; }
+    .cat-body .cat-starting { display:block; font-size:12px; font-weight:700; color:#11845b; margin: 0 0 10px; }
+
+    /* PROMO STRIP */
+    .promo-strip { background: linear-gradient(90deg,#f57c1f,#ff9a3c); padding: 22px 0; }
+    .promo-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .promo-text h4 { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .promo-text p  { font-size: 14px; opacity: .92; color: #fff; margin: 0; }
+    .promo-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* HOW IT WORKS */
+    .legacy-how-works { padding: 70px 0; background: var(--bg-light); }
+    .legacy-how-works .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; position: relative; }
+    .legacy-how-works .step-card { text-align: center; position: relative; z-index: 1; }
+    .legacy-how-works .step-num {
+      width: 54px; height: 54px; background: var(--primary); color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800;
+      margin: 0 auto 18px; border: 4px solid #fff; box-shadow: 0 4px 14px rgba(43,118,166,.3);
+    }
+    .legacy-how-works .step-card h5 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .legacy-how-works .step-card p { font-size: 13px; color: var(--text-light); line-height: 1.65; }
+
+    /* WHY CHOOSE US */
+    .why-us { padding: 70px 0; background: #fff; }
+    .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .why-left-mini { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 28px; }
+    .why-mini-stat { text-align: center; }
+    .why-mini-stat .num { font-size: 32px; font-weight: 800; color: var(--primary); line-height: 1; }
+    .why-mini-stat .lbl { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .why-desc { font-size: 14.5px; color: var(--text-light); line-height: 1.8; margin-bottom: 24px; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .why-card {
+      background: var(--bg-light); border-radius: var(--radius-lg); padding: 22px;
+      display: flex; gap: 16px; border: 1.5px solid var(--border); transition: all .3s;
+    }
+    .why-card:hover { box-shadow: var(--shadow-hov); border-color: var(--primary); transform: translateY(-3px); }
+    .why-icon {
+      width: 50px; height: 50px; background: rgba(43,118,166,.1);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .why-icon i { font-size: 20px; color: var(--primary); }
+    .why-con h5 { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+    .why-con p  { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background: #1a2a3a; color: rgba(255,255,255,.8); }
+    .footer-main { padding: 56px 0 38px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+    .f-logo { display: flex; flex-direction: column; line-height: 1.1; margin-bottom: 14px; }
+    .f-logo .fn { font-size: 22px; font-weight: 800; color: #fff; }
+    .f-logo .fs { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .f-desc { font-size: 13.5px; color: rgba(255,255,255,.62); line-height: 1.72; margin-bottom: 20px; }
+    .f-social, .hdr-social { display: flex; gap: 9px; flex-wrap: wrap; align-items: center; }
+    .social-link { display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; transition: transform .2s ease, color .2s ease, background .2s ease; }
+    .social-link:hover { transform: translateY(-3px); color: var(--accent); }
+    .social-link svg { width: 19px; height: 19px; fill: currentColor; }
+    .hdr-social .social-link { padding: 7px 9px; border-radius: 10px; background: rgba(255,255,255,.08); font-size: 12px; }
+    .hdr-social .social-link:hover { background: rgba(255,255,255,.16); }
+    .f-social .social-link { width: 38px; height: 38px; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.08); }
+    @media (max-width: 900px) { .hdr-social .social-link span { display: none; } .hdr-social .social-link { padding: 7px; } }
+ .f-soc-icon { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#334155; color:#e2e8f0; font-size:18px; transition:all .3s ease-in-out; }
+ .f-soc-icon:hover, .f-soc-icon:focus-visible, .f-soc-icon:active { color:#fff; transform:scale(1.1); outline:none; }
+ .f-soc-icon.whatsapp-link:hover, .f-soc-icon.whatsapp-link:focus-visible, .f-soc-icon.whatsapp-link:active { background:#25D366; box-shadow:0 0 18px rgba(37,211,102,.38); }
+ .f-soc-icon.instagram-link:hover, .f-soc-icon.instagram-link:focus-visible, .f-soc-icon.instagram-link:active { background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); box-shadow:0 0 18px rgba(214,36,159,.4); }
+ .f-soc-icon.facebook-link:hover, .f-soc-icon.facebook-link:focus-visible, .f-soc-icon.facebook-link:active { background:#1877F2; box-shadow:0 0 18px rgba(24,119,242,.4); }
+ .f-soc-icon.youtube-link:hover, .f-soc-icon.youtube-link:focus-visible, .f-soc-icon.youtube-link:active { background:#FF0000; box-shadow:0 0 18px rgba(255,0,0,.4); }
+    .f-col h6 { font-size: 13.5px; font-weight: 800; color: #fff; margin-bottom: 18px; text-transform: uppercase; letter-spacing: .8px; }
+    .f-col ul li { margin-bottom: 9px; }
+    .f-col ul li a { font-size: 13.5px; color: rgba(255,255,255,.62); transition: all .2s; display: flex; align-items: center; gap: 7px; }
+    .f-col ul li a i { font-size: 10px; color: var(--accent); }
+    .f-col ul li a:hover { color: #fff; padding-left: 4px; }
+    .f-contact-item { display: flex; gap: 11px; margin-bottom: 13px; font-size: 13.5px; color: rgba(255,255,255,.62); }
+    .f-contact-item i { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+    .f-contact-item a { color: rgba(255,255,255,.85); }
+    .footer-bot {
+      border-top: 1px solid rgba(255,255,255,.1); padding: 16px 0;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bot p { font-size: 13px; color: rgba(255,255,255,.45); }
+    .payment-strip { background:#080808; display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; padding:12px 16px; }
+    .payment-strip img { width:min(559px, 100%); height:auto; object-fit:contain; display:block; }
+
+    /* CART & MODALS */
+    .cart-overlay, .order-overlay, .mug-overlay, .options-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 2000; display: none; align-items: center; justify-content: center; }
+    body.modal-open { overflow: hidden; }
+    .cart-overlay, .order-overlay, .mug-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      z-index: 2000; display: none; align-items: center; justify-content: center;
+    }
+    .cart-overlay { justify-content: flex-end; }
+    .cart-overlay.open, .order-overlay.open, .mug-overlay.open, .options-overlay.open { display: flex; }
+    .options-modal { background:#fff; border-radius:var(--radius-lg); width:min(500px,94vw); max-height:calc(100vh - 28px); display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.25); }
+    .options-body { padding:20px 24px 10px; overflow-y:auto; min-height:0; overscroll-behavior:contain; }
+    .option-group { margin-bottom:18px; }
+    .option-group label { display:block; font-size:13px; font-weight:700; margin-bottom:8px; }
+    .option-select { width:100%; min-height:44px; border:1px solid var(--border); border-radius:10px; padding:10px 12px; background:#fff; color:var(--text); font:inherit; font-size:13px; }
+  .option-description { margin:8px 0 0; color:var(--text-light); font-size:12px; line-height:1.45; }
+    .options-total { flex-shrink:0; margin:0 24px 12px; padding:12px; background:#f3faf7; display:flex; justify-content:space-between; border-radius:10px; }
+    .options-confirm { flex-shrink:0; display:flex; width:calc(100% - 48px); margin:0 24px 18px; justify-content:center; min-height:46px; }
+    .custom-fields { margin-top:18px; border-top:1px solid #e6eef3; padding-top:16px; }
+    .custom-check { display:flex; gap:9px; align-items:flex-start; margin:12px 0; font-size:13px; line-height:1.4; }
+    .custom-check input { margin-top:2px; accent-color:var(--primary); }
+    .upload-zone[hidden] { display:none !important; }
+ .upload-zone { display:block; border:1px dashed #9ab8c8; border-radius:10px; padding:12px; background:#f8fcfe; margin:7px 0 12px 25px; font-size:12px; color:var(--text-light); transition:.2s; }
+    .upload-zone:hover { border-color:var(--primary); background:#eef8fd; }
+    .file-preview { display:flex; align-items:center; gap:10px; margin:6px 0 12px 25px; min-height:0; }
+    .file-preview img { width:64px; height:50px; border-radius:7px; object-fit:cover; border:1px solid var(--border); }
+    .file-preview button { border:0; background:#fff0f0; color:#b42318; border-radius:6px; padding:6px 8px; cursor:pointer; font-size:12px; }
+    .custom-fields select, .custom-fields textarea { width:100%; border:1px solid var(--border); border-radius:9px; padding:10px; font:inherit; font-size:13px; margin-top:6px; }
+    .custom-fields textarea { resize:vertical; min-height:75px; }
+    .text-input { width:100%; border:1px solid var(--border); border-radius:9px; padding:10px; margin:6px 0 12px; font:inherit; }
+    .size-matrix { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; }
+    .size-matrix label { text-align:center; font-size:11px; }
+    .size-input { width:100%; min-height:34px; border:1px solid var(--border); border-radius:7px; padding:6px; margin-top:4px; text-align:center; }
+    .bulk-saving { margin:10px 0 0; color:#11845b; font-size:12px; font-weight:700; }
+    .options-total { margin: 8px 24px 14px; padding:12px; background:#f3faf7; display:flex; justify-content:space-between; border-radius:10px; }
+    .options-total strong { color:#11845b; }
+    .options-confirm { display:flex; width:calc(100% - 48px); margin:0 24px; justify-content:center; }
+    .qr-content { padding: 20px; text-align:center; display:grid; gap:10px; justify-items:center; }
+    .qr-content img { width:190px; height:190px; object-fit:contain; border:8px solid #fff; box-shadow:0 2px 14px rgba(0,0,0,.1); }
+    .cart-line { display:grid; grid-template-columns:1fr auto; gap:8px; padding:13px 0; border-bottom:1px solid #eee; }
+    .cart-line-meta { font-size:12px; color:#777; margin-top:4px; }
+    .cart-line-actions { display:flex; align-items:center; gap:7px; }
+    .qty-btn { width:26px; height:26px; border:1px solid var(--border); background:#fff; border-radius:6px; cursor:pointer; }
+    .remove-btn { border:0; background:transparent; color:#c44; cursor:pointer; margin-left:4px; }
+    .cart-panel {
+      width: min(420px, 95vw); height: 100vh; background: #fff;
+      display: flex; flex-direction: column; box-shadow: -4px 0 40px rgba(0,0,0,.2);
+    }
+    .cart-hdr, .om-hdr {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 20px; border-bottom: 1px solid var(--border);
+    }
+    .cart-close, .om-close { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-light); }
+    .cart-body { flex: 1; overflow-y: auto; padding: 16px; }
+    .cart-empty { text-align: center; padding: 50px 20px; color: var(--text-muted); }
+    .cart-footer { padding: 16px 20px; border-top: 1px solid var(--border); }
+    .cart-total { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 16px; font-weight: 700; }
+    .cart-footer .btn { width: 100%; margin-bottom: 8px; justify-content: center; }
+
+    .order-modal, .mug-modal {
+      background: #fff; border-radius: var(--radius-lg); width: min(500px, 94%);
+      max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .om-body { padding: 20px 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 14px; outline: none; }
+    .delivery-summary { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 10px; background: #f3faf7; color: var(--text); margin: 6px 0 16px; font-size: 13px; }
+    .delivery-summary strong { color: #11845b; }
+    .upi-panel { margin: -4px 0 16px; padding: 12px; border: 1px solid #cfe4ef; border-radius: 10px; background: #f5fbff; }
+    .upi-panel p { font-size:12px; color:var(--text-light); margin:0 0 10px; }
+    .upi-panel .btn { margin-right:6px; margin-bottom:6px; padding:8px 10px; font-size:12px; }
+    .upi-panel small { display:block; color:var(--text-muted); font-size:11px; margin-top:4px; }
+    @media (max-width: 520px) { .order-modal, .options-modal { width: calc(100% - 24px); } .om-body, .options-body { padding: 16px; } }
+    .om-footer { padding: 16px 24px 20px; border-top: 1px solid var(--border); }
+    .om-footer .btn { width: 100%; justify-content: center; font-size: 15px; padding: 12px; }
+
+    /* FLOATING BUTTONS */
+    .wp-float {
+      position: fixed; bottom: 80px; right: 24px; width: 52px; height: 52px;
+      background: var(--wp-green); border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; color: #fff; font-size: 26px;
+      z-index: 999; box-shadow: 0 4px 16px rgba(37,211,102,.45);
+    }
+    .btt-btn {
+      position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px;
+      background: var(--primary); border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; color: #fff; font-size: 16px;
+      cursor: pointer; z-index: 999; border: none;
+    }
+
+    .coupon-row { display:flex; gap:10px; align-items:stretch; }
+    .coupon-row input, .coupon-next-row input { flex:1; min-width:0; border:1px solid #dbe2ea; border-radius:12px; padding:12px 14px; }
+    .coupon-row .btn { white-space:nowrap; border-radius:12px; padding-inline:20px; }
+    .coupon-message { display:block; min-height:18px; margin-top:7px; font-weight:700; }
+    .coupon-message.success { color:#168548; }
+    .coupon-message.error { color:#c0392b; }
+    .coupon-next-row { display:flex; gap:10px; margin-top:10px; }
+    .coupon-applied-chip { display:inline-flex; margin-top:8px; padding:6px 10px; border-radius:999px; background:#ecfdf3; color:#168548; font-size:12px; font-weight:800; }
+    .billing-card { display:grid; gap:11px; padding:18px; margin:14px 0; border:1px solid #e2e8f0; border-radius:16px; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.05); }
+    .billing-card h4 { margin:0 0 2px; font-size:15px; color:#0f172a; }
+    .billing-line { display:flex; align-items:center; justify-content:space-between; gap:16px; color:#475569; font-size:14px; }
+    .billing-line strong { color:#0f172a; font-weight:700; }
+    .billing-line[hidden] { display:none; }
+    .coupon-breakdown { display:grid; gap:8px; }
+    .coupon-breakdown:empty { display:none; }
+    .free-delivery-badge { padding:4px 9px; border-radius:999px; background:#dcfce7; color:#15803d!important; font-size:12px; }
+    .billing-grand-total { margin-top:4px; padding-top:13px; border-top:1px solid #e2e8f0; color:#0f172a; font-weight:800; }
+    .billing-grand-total strong { color:var(--primary); font-size:22px; }
+
+    @media (max-width: 768px) {
+      .main-nav, .top-bar, .hdr-social { display: none; }
+      body { overflow-x: hidden; }
+      .hdr-inner { gap: 10px; padding: 10px 22px; }
+      .sk-logo .sk-name { font-size: clamp(20px, 4vw, 24px); }
+      .sk-logo .sk-sub { font-size: clamp(8px, 1.8vw, 10.5px); letter-spacing: .9px; }
+ .hdr-search { flex: 0 1 140px; width: 140px; min-width: 86px; max-width: 140px; }
+ .hdr-search.search-active { flex: 1 1 auto; width: auto; max-width: calc(100vw - 210px); }
+ .hdr-search input { height: 42px; padding: 0 44px 0 12px; font-size: 11px; }
+ .hdr-search input::placeholder { color: #94a3b8; }
+ .hdr-search .search-submit { width: 42px; padding: 0; border-radius: 0 25px 25px 0; }
+      .hdr-search .search-clear { display: none !important; }
+      .hdr-icons { margin-left: auto; gap: 0; }
+      .hdr-icon-btn { padding: 8px 7px; }
+      .mob-toggle { display: flex; }
+      body.search-mode .hdr-search { position: fixed; left: 14px; right: 14px; top: 12px; max-width: none; width: auto; flex: none; }
+      body.search-mode .hdr-search input { height: 48px; padding: 0 92px 0 16px; font-size: 16px; background: #fff; }
+      body.search-mode .hdr-search .search-submit { width: 50px; }
+      body.search-mode .search-suggestions { max-height: 55vh; overflow-y: auto; }
+      .footer-grid, .why-layout, .legacy-how-works .steps-grid { grid-template-columns: 1fr; }
+      .cats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+    @media (max-width: 480px) {
+      .container { width: min(100% - 28px, 1180px); }
+      .cats-grid { grid-template-columns: 1fr; gap: 16px; }
+      .cat-img { height: 190px; }
+      .cat-body { padding: 16px; }
+      .cat-title { font-size: 18px; }
+      .cat-circle-badge { width: 46px; height: 46px; right: 10px; bottom: 10px; }
+      .whatsapp-btn { right: 14px; bottom: 76px; width: 52px; height: 52px; }
+      .btt-btn { right: 18px; bottom: 18px; }
+      .payment-strip { padding: 10px 12px; }
+      .options-overlay { align-items:flex-end; }
+      .options-modal { width:100%; max-height:calc(100vh - 10px); border-radius:18px 18px 0 0; }
+      .options-body { padding:18px 16px 8px; }
+      .options-total { margin-left:16px; margin-right:16px; }
+      .options-confirm { width:calc(100% - 32px); margin-left:16px; margin-right:16px; margin-bottom:12px; }
+      .custom-fields textarea { min-height:90px; }
+      body.search-mode .hero, body.search-mode .feat-bar, body.search-mode > section:not(#products), body.search-mode footer { display:none; }
+      body.search-mode .search-backdrop { display:block; position:fixed; inset:0; background:rgba(15,23,42,.42); z-index:1050; }
+      body.search-mode .main-header { z-index:1100; }
+      body.search-mode .hdr-search { position:fixed; left:14px; right:14px; top:12px; max-width:none; }
+      body.search-mode .hdr-search input { height:48px; font-size:16px; background:#fff; }
+      body.search-mode .search-suggestions { max-height: 55vh; overflow-y: auto; }
+      body.search-mode #products { position:relative; z-index:1060; margin-top:70px; background:#fff; }
+      .search-results-active .cat-card { grid-template-columns: 1fr; gap: 10px; }
+      .search-results-active .cat-card .cat-icon { margin: 0 auto; }
+    }
+  /* Search stays inline: filtering never creates a modal, backdrop, or suggestion card. */
+.search-backdrop,.search-suggestions,body.search-mode .search-backdrop{display:none!important;pointer-events:none!important;background:transparent!important;backdrop-filter:none!important}
+body.search-mode .ann-bar,body.search-mode .main-header .sk-logo,body.search-mode .main-header .main-nav,body.search-mode .main-header .hdr-icons,body.search-mode .main-header .mob-toggle{visibility:visible}
+body.search-mode .main-header{position:relative;z-index:1;background:#fff;border-bottom:1px solid var(--border)}
+body.search-mode .hdr-search{position:relative;left:auto;right:auto;top:auto;width:100%;max-width:360px;flex:none}
+body.search-mode .hero,body.search-mode .feat-bar,body.search-mode>section:not(#products),body.search-mode footer{display:block}
+body.search-mode #products{position:static;margin-top:0;background:#fff}
+.search-results-active .cats-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;margin:0}
+.search-results-active .cat-card{display:flex;flex-direction:column;align-items:stretch;text-align:center;gap:10px}
+.search-results-active .cat-card .cat-icon{margin:0 auto}
+ .cat-link{display:inline-flex!important;align-items:center;justify-content:center;gap:7px;background:#0f172a!important;color:#fff!important;border:0;border-radius:9px;padding:10px 14px;font-weight:800;text-decoration:none;opacity:1!important;transition:background-color .2s ease,transform .2s ease,box-shadow .2s ease}.cat-link:hover,.cat-link:focus-visible{background:#2563eb!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 8px 18px rgba(37,99,235,.24);outline:none}.cat-link:active{transform:translateY(0)}
+ .coupon-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.coupon-badge{display:inline-flex;padding:5px 8px;border-radius:999px;background:#dcfce7;color:#168548;font-size:11px;font-weight:800}.order-success-panel{width:min(460px,calc(100vw - 28px));background:#fff;border-radius:18px;padding:26px;box-shadow:0 24px 70px rgba(15,23,42,.3);text-align:center}.order-success-panel h3{margin:10px 0 5px;font-size:24px}.order-success-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;margin:auto;background:#dcfce7;color:#168548;font-size:27px}.order-success-summary{margin:18px 0;padding:13px;border-radius:10px;background:#f7f8fc;text-align:left;white-space:pre-line;color:#475569;font-size:13px}.order-success-actions{display:flex;gap:8px}.order-success-actions .btn{flex:1}
+@media(max-width:700px){.search-results-active .cats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.order-success-actions{flex-direction:column}}
+
+    /* Website support chat */
+    .support-chat-toggle.wp-float { background:var(--primary); color:#fff; border:0; cursor:pointer; font-size:20px; }
+    .support-chat-toggle.wp-float:hover { background:var(--primary-dark); }
+    .support-chat-panel { position:fixed; z-index:1300; right:24px; bottom:144px; width:min(390px,calc(100vw - 32px)); height:min(620px,calc(100dvh - 180px)); min-height:390px; display:flex; flex-direction:column; overflow:hidden; border:1px solid #dbe3eb; border-radius:18px; background:#fff; box-shadow:0 24px 70px rgba(15,23,42,.24); font-family:'Open Sans',sans-serif; }
+    .support-chat-panel[hidden] { display:none; }
+    .support-chat-header { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 18px; color:#fff; background:#17324d; }
+    .support-chat-brand { display:flex; align-items:center; gap:11px; }
+    .support-chat-mark { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; color:#17324d; background:#fff; font-weight:800; }
+    .support-chat-header h2 { margin:0; font-size:15px; font-weight:800; }
+    .support-chat-header p { margin:3px 0 0; color:#d9e6f2; font-size:11px; }
+    .support-chat-close { width:34px; height:34px; border:0; border-radius:9px; color:#fff; background:rgba(255,255,255,.12); cursor:pointer; font-size:20px; }
+    .support-chat-log { flex:1; min-height:0; display:flex; flex-direction:column; gap:10px; padding:16px; overflow:auto; overscroll-behavior:contain; background:#f5f8fb; }
+    .support-chat-message { max-width:92%; align-self:flex-start; padding:10px 12px; border:1px solid #e2e8f0; border-radius:4px 14px 14px 14px; background:#fff; color:#263648; font-size:13px; line-height:1.55; white-space:pre-line; overflow-wrap:anywhere; }
+    .support-chat-message.is-user { align-self:flex-end; border-color:#d8eaf7; border-radius:14px 4px 14px 14px; background:#eaf4fb; }
+    .support-chat-order-form { padding:12px 14px 8px; border-top:1px solid #e6ebf0; background:#fff; }
+    .support-chat-order-form[hidden] { display:none; }
+    .support-chat-order-form label { display:block; margin-bottom:6px; color:#344256; font-size:12px; font-weight:700; }
+    .support-chat-input-row { display:flex; gap:8px; }
+    .support-chat-input-row input { min-width:0; flex:1; height:42px; padding:0 11px; border:1px solid #cbd5e1; border-radius:9px; font:inherit; font-size:14px; }
+    .support-chat-input-row button { padding:0 14px; border:0; border-radius:9px; color:#fff; background:var(--primary); font:inherit; font-size:13px; font-weight:700; cursor:pointer; }
+    .support-chat-form-status { min-height:16px; margin:5px 0 0; color:#64748b; font-size:11px; }
+    .support-chat-menu { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:12px 14px; border-top:1px solid #e6ebf0; background:#fff; }
+    .support-chat-menu button { min-height:40px; padding:8px 9px; border:1px solid #dbe3eb; border-radius:10px; color:#24435e; background:#fff; font:inherit; font-size:12px; font-weight:700; text-align:left; cursor:pointer; transition:background .15s,border-color .15s; }
+    .support-chat-menu button:hover { border-color:#9fc3df; background:#f1f8fd; }
+    .support-chat-contact { padding:0 14px 12px; color:#64748b; background:#fff; font-size:11px; text-align:center; }
+    .support-chat-contact a { color:var(--primary-dark); font-weight:700; text-decoration:underline; }
+    @media(max-width:700px) { .support-chat-panel { right:12px; bottom:142px; width:calc(100vw - 24px); height:min(620px,calc(100dvh - 162px)); min-height:360px; } }
+    @media(prefers-reduced-motion:reduce) { .support-chat-panel *, .support-chat-toggle { scroll-behavior:auto; transition:none!important; } }
+</style>
+
+</head>
+<body>
+<div id="searchBackdrop" class="search-backdrop" aria-hidden="true"></div>
+<div id="mobileNavOverlay" class="mobile-nav-overlay" onclick="if(event.target===this)toggleMobileNav()">
+  <nav class="mobile-nav-drawer" aria-label="Mobile navigation">
+    <button type="button" class="mobile-nav-close" aria-label="Close navigation menu" onclick="toggleMobileNav()">×</button>
+    <a href="#products" onclick="toggleMobileNav()">Our Products</a>
+    <a href="#products" onclick="toggleMobileNav()">All Products</a>
+    <a href="https://instagram.com/hey.avipal" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://youtube.com/@surajpal-1518u" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a href="#contact" onclick="toggleMobileNav()">Contact / Support</a>
+  </nav>
+</div>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  <i class="fas fa-tag"></i>
+  <span>🎉 Get <strong>10% OFF</strong> on your first order — Code: <strong>PRINT10</strong></span>
+  <a href="#products">Shop Now ��</a>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container-fluid">
+    <div class="top-bar-inner">
+      <div class="top-contact">
+        <p><i class="fas fa-headphones-alt"></i><a href="tel:+918447459316">+91 84474 59316</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:shubhprinters88@gmail.com">shubhprinters88@gmail.com</a></p>
+        <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 7:00 PM</p>
+      </div>
+      <div class="top-links">
+        <a href="#products">All Products</a>
+        <a href="#order-direct">Direct Order</a>
+        <a href="#contact" class="tl-quote">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<header class="main-header">
+  <div class="hdr-inner">
+    <a href="#home" class="sk-logo">
+      <span class="sk-name">SK Graphics</span>
+      <span class="sk-sub">Custom Printing &amp; Branding</span>
+    </a>
+
+    <nav class="main-nav">
+      <div class="ni">
+        <a href="#products">Our Products <i class="fas fa-angle-down"></i></a>
+        <div class="mega-dd">
+          <div class="mega-left">
+            <ul>
+              <li class="act"><a href="#products">Print Products <i class="fas fa-angle-right"></i></a></li>
+            </ul>
+          </div>
+          <div class="mega-right">
+            <div class="sub-panel act">
+              <h6>All Categories</h6>
+              <div class="prod-links">
+                <a href="#products">Business Cards</a>
+                <a href="#products">Flyers &amp; Leaflets</a>
+                <a href="#products">Brochures</a>
+                <a href="#products">Posters &amp; Banners</a>
+                <a href="#products">Custom Mugs</a>
+                <a href="#products">Stickers &amp; Labels</a>
+                <a href="#products">Custom T-Shirts</a>
+                <a href="#products">Roll-Up Banners</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ni"><a href="#products">All Products</a></div>
+      <div class="ni"><a href="#how-it-works">How It Works</a></div>
+      <div class="ni"><a href="#why-us">About Us</a></div>
+      <div class="ni"><a href="#contact">Contact Us</a></div>
+    </nav>
+
+    <div class="hdr-search">
+      <input id="productSearch" type="search" placeholder="Search products, cards, t-shirts..." aria-label="Search products" autocomplete="off">
+      <button type="button" class="search-clear" aria-label="Clear search"><i class="fas fa-times"></i></button>
+      <button type="button" class="search-submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+      <div id="searchSuggestions" class="search-suggestions" role="listbox" aria-label="Product suggestions"></div>
+    </div>
+
+    <div class="hdr-social" aria-label="Social media links">
+      <a class="social-link instagram-link" href="https://instagram.com/hey.avipal" target="_blank" rel="noopener noreferrer" aria-label="Instagram @avi.pal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 2h8.6A5.7 5.7 0 0 1 22 7.7v8.6a5.7 5.7 0 0 1-5.7 5.7H7.7A5.7 5.7 0 0 1 2 16.3V7.7A5.7 5.7 0 0 1 7.7 2Zm0 2A3.7 3.7 0 0 0 4 7.7v8.6A3.7 3.7 0 0 0 7.7 20h8.6a3.7 3.7 0 0 0 3.7-3.7V7.7A3.7 3.7 0 0 0 16.3 4H7.7Zm8.8 1.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-3-3Z"/></svg><span>Instagram</span></a>
+      <a class="social-link" href="https://youtube.com/@surajpal-1518u" target="_blank" rel="noopener noreferrer" aria-label="YouTube @surajpal-1518u"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.8 31.8 0 0 0 0 12a31.8 31.8 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 24 12a31.8 31.8 0 0 0-.5-5.8ZM9.6 15.5v-7l6.2 3.5-6.2 3.5Z"/></svg><span>YouTube</span></a>
+    </div>
+
+    <div class="hdr-icons">
+      <button class="hdr-icon-btn" title="Shopping Cart" onclick="openCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+      <button class="hdr-icon-btn" type="button" id="supportChatHeaderOpen" title="AI Support" aria-label="Open AI Support" aria-controls="supportChatPanel" aria-expanded="false" style="color:var(--primary)">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+      </button>
+      <a href="https://wa.me/918447459316" target="_blank" rel="noopener noreferrer" class="hdr-icon-btn" title="WhatsApp" aria-label="WhatsApp support at +91 84474 59316" style="color:var(--wp-green)">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button class="mob-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO BANNER -->
+<section class="hero" id="home">
+  <div class="hero-banner-wrapper">
+    <!-- Aapki provide ki gayi online print shop image -->
+    <img decoding="async" src="/assets/sk-hero-online-print-shop.png" alt="SK Graphics online print shop" width="1600" height="560" loading="eager" fetchpriority="high">
+  </div>
+</section>
+
+<!-- FEATURES BAR -->
+<div class="feat-bar">
+  <div class="feat-bar-inner container-fluid">
+    <div class="feat-item"><i class="fas fa-medal"></i><div><h6>Premium Quality</h6><p>State-of-the-art printing</p></div></div>
+    <div class="feat-item"><i class="fas fa-truck"></i><div><h6>Fast Delivery</h6><p>Pan India shipping</p></div></div>
+    <div class="feat-item"><i class="fas fa-tags"></i><div><h6>Best Prices</h6><p>Competitive bulk rates</p></div></div>
+    <div class="feat-item"><i class="fas fa-headset"></i><div><h6>Expert Support</h6><p>Design &amp; file help</p></div></div>
+    <div class="feat-item"><i class="fas fa-shield-alt"></i><div><h6>100% Satisfaction</h6><p>Quality guarantee</p></div></div>
+  </div>
+</div>
+
+<!-- PRODUCT CATEGORIES -->
+<section class="section-pad" id="products">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:48px">
+      <span class="section-tag">What We Print</span>
+      <h2 class="section-title">Explore Our Product Categories</h2>
+      <p class="section-subtitle">From business essentials to promotional merchandise — we print it all with precision and speed.</p>
+    </div>
+    <p id="searchResultsNote" class="search-results-note" aria-live="polite"></p>
+    <div class="cats-grid" id="productGrid">
+      <a class="cat-card id-card-lanyard-card" href="/products/id-card-with-lanyard" style="color:inherit;text-decoration:none">
+        <div class="cat-img"><img decoding="async" src="/assets/sk-id-card-lanyard.png" alt="Custom ID card with branded lanyard" loading="lazy"></div>
+        <div class="cat-body"><h5>Custom ID Card + Lanyard</h5><p>Personalized team ID cards with a custom branded lanyard, from ₹70 per set.</p><span class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Customize &amp; Order</span></span></div>
+      </a>
+      <!-- 1. Business Cards -->
+      <div class="cat-card" onclick="openProductOptions('Business Cards')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-business-cards.png" alt="Business Cards" loading="lazy"><div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Business Cards</h5>
+          <p>Standard, UV spot, foil, and premium finish options for lasting impressions.</p><button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 2. Flyers & Leaflets -->
+      <div class="cat-card" onclick="openProductOptions('Color Pamphlets')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-flyers-clean.png" alt="Flyers & Leaflets" loading="lazy" onerror="this.onerror=null;this.src='/assets/sk-flyers-leaflets.png'">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Color Pamphlets</h5>
+          <p>Full-colour, double-sided flyers in A4, A5, A6 and custom sizes.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 3. Brochures -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Brochures')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-brochures.png" alt="Brochures" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Brochures</h5>
+          <p>Bi-fold, tri-fold and Z-fold brochures on premium art paper.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 4. Posters & Banners -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Posters & Banners')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-banners.png" alt="Posters & Banners" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Posters &amp; Banners</h5>
+          <p>Vibrant large-format vinyl banners, posters, and flex prints for every event.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 5. Custom Mugs -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Custom Mugs')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-mugs.png" alt="Custom Mugs" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Custom Mugs</h5>
+          <p>Personalized ceramic mugs — ideal corporate gifts with your logo or photo.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 6. Stickers & Labels -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Stickers & Labels')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-stickers.png" alt="Stickers & Labels" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Stickers &amp; Labels</h5>
+          <p>Die-cut, roll, and sheet stickers in any shape — waterproof options available.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 7. Custom T-Shirts -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Custom T-Shirts')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-tshirt.png" alt="Custom T-Shirts" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Custom T-Shirts</h5>
+          <p>Sublimation, DTG, and screen-printed t-shirts for events, teams, and gifting.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 8. Roll-Up Banners -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Roll-Up Banners')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-roll-up-banner.png" alt="Roll-Up Banners" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Roll-Up Banners</h5>
+          <p>Retractable standees for exhibitions, retail, and corporate events.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 9. Diaries & Notebooks -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Diaries & Notebooks')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-notebooks.png" alt="Diaries & Notebooks" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Diaries &amp; Notebooks</h5>
+          <p>Custom-branded hardcover and softcover diaries, notepads, and planners.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 10. Presentation Folders -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Presentation Folders')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-presentation-folders.png" alt="Presentation Folders" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Presentation Folders</h5>
+          <p>Premium printed folders for presentations, proposals, and corporate kits.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 11. Canvas Printing -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Canvas Printing')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-canvas-printing.png" alt="Canvas Printing" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Canvas Printing</h5>
+          <p>Photo-quality canvas prints on stretched frames for homes, offices, and gifts.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+
+      <!-- 12. Fancy Boxes & Packaging -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Fancy Boxes & Packaging')">
+        <div class="cat-img">
+          <img decoding="async" src="/assets/sk-fancy-boxes.png" alt="Fancy Boxes & Packaging" loading="lazy">
+ <div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div>
+ </div>
+ <div class="cat-body">
+          <h5>Fancy Boxes &amp; Packaging</h5>
+          <p>Custom packaging, gift boxes, and carry bags with premium finishing options.</p>
+          <button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button>
+        </div>
+      </div>
+      <!-- Startup packaging products -->
+      <div class="cat-card" onclick="openConfiguredProductOptions('Custom Heat Shrink Sleeve Labels')"><div class="cat-img"><img decoding="async" src="/assets/sk-shrink-sleeve.png" alt="Custom heat shrink sleeve labels" loading="lazy"><div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div></div><div class="cat-body"><h5>Heat Shrink Sleeve Labels</h5><p>PVC and PETG shrink labels for bottles, jars and cosmetics.</p><button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button></div></div>
+      <div class="cat-card" onclick="openConfiguredProductOptions('Custom Stand-Up Zip Lock Pouches')"><div class="cat-img"><img decoding="async" src="/assets/sk-standup-pouches.png" alt="Custom stand-up zip lock pouches" loading="lazy"><div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div></div><div class="cat-body"><h5>Stand-Up Zip Lock Pouches</h5><p>Printed pouches for dry fruits, spices, tea and snacks.</p><button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button></div></div>
+      <div class="cat-card" onclick="openConfiguredProductOptions('Custom Branded Packaging Tape')"><div class="cat-img"><img decoding="async" src="/assets/sk-branded-tape.png" alt="Custom branded packaging tape" loading="lazy"><div class="cat-circle-badge"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6B9VsEQX1C1XedOB5Z0l6grVD479ub.png" alt="SK Graphics logo"></div></div><div class="cat-body"><h5>Branded Packaging Tape</h5><p>Logo-printed cello tape for ecommerce cartons and shipping boxes.</p><button type="button" class="cat-link"><i class="fas fa-shopping-bag" aria-hidden="true"></i><span> Add to Cart +</span></button></div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px">
+      <button onclick="openCart()" class="btn btn-primary" style="padding:12px 36px;font-size:15px">
+        <i class="fas fa-shopping-cart"></i> View Cart &amp; Order
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO STRIP -->
+<div class="promo-strip" id="order-direct">
+  <div class="container promo-inner">
+    <div class="promo-text">
+      <h4>🎁 Corporate Bulk Orders Welcome!</h4>
+      <p>Special discounts for bulk quantities — branding kits, event materials, corporate gifts &amp; more.</p>
+    </div>
+    <div class="promo-btns">
+      <a href="https://wa.me/918447459316?text=Hi%20SK%20Graphics!%20I%20want%20to%20place%20a%20bulk%20order." target="_blank" class="btn btn-white">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+      <a href="tel:+918447459316" class="btn btn-outline-white">
+        <i class="fas fa-phone"></i> Call Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="legacy-how-works" id="how-it-works">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:50px">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Ordering is easy! Follow these 4 simple steps to get your prints delivered.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h5>Choose Your Product</h5>
+        <p>Browse our catalog, select size, finish, and quantities.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h5>Upload Your Artwork</h5>
+        <p>Upload your ready print-file or tell us your requirements on WhatsApp.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h5>Review &amp; Approve</h5>
+        <p>We send you a digital proof before proceeding with final printing.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h5>Fast Delivery</h5>
+        <p>Securely packed and delivered safely directly to your doorstep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="why-layout">
+      <div>
+        <span class="section-tag">Why SK Graphics</span>
+        <h2 class="section-title" style="margin-top:12px">Your Trusted Printing Partner Since 2010</h2>
+        <p class="why-desc">Based in Delhi NCR, SK Graphics has been serving thousands of businesses and entrepreneurs across India with high quality offset and digital printing.</p>
+        <div class="why-left-mini">
+          <div class="why-mini-stat"><div class="num">10+</div><div class="lbl">Years Experience</div></div>
+          <div class="why-mini-stat"><div class="num">50K+</div><div class="lbl">Happy Clients</div></div>
+          <div class="why-mini-stat"><div class="num">100+</div><div class="lbl">Products</div></div>
+        </div>
+        <a href="#products" class="btn btn-primary">Explore All Products</a>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-print"></i></div>
+          <div class="why-con"><h5>High-Res Printing</h5><p>Latest offset and digital tech ensures crisp graphics every time.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-bolt"></i></div>
+          <div class="why-con"><h5>Fast Turnaround</h5><p>Quick dispatch and reliable doorstep shipping across India.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="f-logo"><span class="fn">SK Graphics</span><span class="fs">Custom Printing &amp; Branding</span></div>
+          <p class="f-desc">One-stop shop for business cards, brochures, flyers, banners, cups, t-shirts, packaging & more.</p>
+          <div class="f-social" aria-label="Social media links">
+            <a href="https://wa.me/918447459316" target="_blank" rel="noopener noreferrer" class="social-link f-soc-icon whatsapp-link" aria-label="Contact on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/hey.avipal" target="_blank" rel="noopener noreferrer" class="social-link f-soc-icon instagram-link" aria-label="Follow on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 2h8.6A5.7 5.7 0 0 1 22 7.7v8.6a5.7 5.7 0 0 1-5.7 5.7H7.7A5.7 5.7 0 0 1 2 16.3V7.7A5.7 5.7 0 0 1 7.7 2Zm0 2A3.7 3.7 0 0 0 4 7.7v8.6A3.7 3.7 0 0 0 7.7 20h8.6a3.7 3.7 0 0 0 3.7-3.7V7.7A3.7 3.7 0 0 0 16.3 4H7.7Zm4.3 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-3-3Z"/></svg></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link f-soc-icon facebook-link" aria-label="Visit Facebook"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://youtube.com/@surajpal-1518u" target="_blank" rel="noopener noreferrer" class="social-link f-soc-icon youtube-link" aria-label="Visit YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="#products"><i class="fas fa-angle-right"></i> All Products</a></li>
+            <li><a href="#how-it-works"><i class="fas fa-angle-right"></i> How It Works</a></li>
+            <li><a href="#why-us"><i class="fas fa-angle-right"></i> About Us</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h6>Popular Items</h6>
+          <ul>
+            <li><a href="#products"><i class="fas fa-angle-right"></i> Business Cards</a></li>
+            <li><a href="#products"><i class="fas fa-angle-right"></i> Custom T-Shirts</a></li>
+            <li><a href="#products"><i class="fas fa-angle-right"></i> Custom Mugs</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h6>Contact Us</h6>
+          <div class="f-contact-item"><i class="fas fa-phone"></i><a href="tel:+918447459316">+91 84474 59316</a></div>
+          <div class="f-contact-item"><i class="fas fa-envelope"></i><a href="mailto:shubhprinters88@gmail.com">shubhprinters88@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="payment-strip" aria-label="Accepted payment methods"><img decoding="async" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-L0uFxWxpgN0L3kyLrBgHVLgbhlXYjB.png" alt="Accepted cards and payment methods"></div>
+  <div class="container">
+    <div class="footer-bot">
+      <p>© 2026 SK Graphics. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT OPTIONS MODAL -->
+<div class="options-overlay" id="optionsOverlay" onclick="if(event.target===this)closeProductOptions()">
+  <div class="options-modal" role="dialog" aria-modal="true" aria-labelledby="optionsTitle">
+    <div class="om-hdr"><h3 id="optionsTitle">Select options</h3><button class="om-close" type="button" aria-label="Close product options" onclick="closeProductOptions()">×</button></div>
+    <div class="options-body" id="optionsBody"></div>
+    <div class="options-total"><span id="optionsPriceLabel">Price</span><strong id="optionsPrice">₹0</strong></div>
+    <button class="btn btn-primary options-confirm" id="optionsConfirmButton" onclick="confirmProductOption()"><i class="fas fa-cart-plus"></i> Confirm &amp; Add to Cart</button>
+  </div>
+</div>
+
+<div class="options-overlay" id="qrOverlay" onclick="if(event.target===this)closeUPIQR()"><div class="options-modal qr-modal"><div class="om-hdr"><h3>Scan to pay via UPI</h3><button class="om-close" onclick="closeUPIQR()">×</button></div><div class="qr-content"><img decoding="async" id="upiQrImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="280" height="280" alt="UPI payment QR code" loading="lazy"><strong id="upiQrAmount"></strong><small>Secure Razorpay QR • Scan with any UPI app</small></div></div></div>
+
+<!-- CART PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()">
+  <div class="cart-panel">
+    <div class="cart-hdr">
+      <h3><i class="fas fa-shopping-cart" style="color:var(--primary)"></i> Your Cart</h3>
+      <button class="cart-close" onclick="closeCart()">×</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-cart" style="font-size:40px;margin-bottom:10px;opacity:.3"></i>
+        <p>Your cart is empty.<br>Select any product to start.</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total"><span>Total:</span><span id="cartTotalAmt">₹0</span></div>
+      <div class="delivery-summary"><span><s>₹50</s> delivery</span><strong>FREE Delivery</strong></div>
+      <button class="btn btn-primary" onclick="openOrderModal()"><i class="fas fa-credit-card"></i> Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="order-overlay" id="orderOverlay" onclick="if(event.target===this)closeOrderModal()">
+  <div class="order-modal">
+    <div class="om-hdr">
+      <h3><i class="fas fa-credit-card" style="color:var(--primary)"></i> Checkout</h3>
+      <button class="om-close" onclick="closeOrderModal()">×</button>
+    </div>
+    <div class="om-body">
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <div class="form-group">
+          <label for="custName">Your Name *</label>
+          <input type="text" id="custName" placeholder="e.g. Rahul Sharma" required>
+        </div>
+        <div class="form-group">
+          <label for="custPhone">Contact Number *</label>
+          <input type="tel" id="custPhone" placeholder="e.g. 9876543210" required>
+        </div>
+        <div class="form-group">
+          <label for="custAddress">Delivery Address *</label>
+          <textarea id="custAddress" rows="3" placeholder="Enter full address with PIN code" required></textarea>
+        </div>
+        <div class="form-group coupon-group">
+          <label for="couponCode">Have a coupon?</label>
+          <div class="coupon-row"><input id="couponCode" type="text" maxlength="40" autocomplete="off" placeholder="Enter coupon code" aria-label="Coupon code"><button type="button" class="btn btn-outline" id="applyCouponBtn" onclick="applyCoupon()">Submit</button></div>
+          <div id="nextCouponInput"></div>
+          <small id="couponMessage" class="coupon-message" aria-live="polite"></small>
+        </div>
+        <section class="billing-card" aria-label="Order total">
+          <h4>Order summary</h4>
+          <div class="billing-line"><span>Item total</span><strong id="checkoutSubtotal">₹0</strong></div>
+          <div class="billing-line" id="bulkDiscountRow" hidden><span>Bulk discount</span><strong id="checkoutTierDiscount">−₹0</strong></div>
+          <div id="couponBreakdown" class="coupon-breakdown" aria-live="polite"></div>
+          <div class="billing-line"><span>Delivery</span><strong class="free-delivery-badge">FREE</strong></div>
+          <div class="billing-line billing-grand-total"><span>Grand total</span><strong id="checkoutTotal">₹0</strong></div>
+        </section>
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method *</label>
+          <select id="paymentMethod" required onchange="updatePaymentPanel()"><option value="COD">Cash on Delivery (COD)</option><option value="UPI">UPI Payment</option><option value="Netbanking">Netbanking / Cards</option></select>
+          <div id="upiPaymentPanel" class="upi-panel" hidden><p>Pay securely with UPI apps, cards, or Netbanking via Razorpay Checkout.</p><button type="button" class="btn btn-primary" onclick="launchUPIPayment()"><i class="fas fa-mobile-alt"></i> Pay via UPI App</button><button type="button" class="btn btn-outline" onclick="showUPIQR()"><i class="fas fa-qrcode"></i> Show QR Code</button><button type="button" class="btn btn-outline" onclick="startRazorpayPayment()"><i class="fas fa-lock"></i> Pay with Razorpay</button></div>
+        </div>
+        <div class="form-group">
+          <label for="custNotes">Special Instructions / Printing Notes</label>
+          <textarea id="custNotes" rows="2" placeholder="Quantity details, color specifications, etc."></textarea>
+        </div>
+        <div class="om-footer" style="padding:16px 0 0;border-top:1px solid var(--border)">
+          <button type="submit" class="btn btn-wp" id="orderSubmitBtn"><i class="fab fa-whatsapp"></i> Submit Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="order-overlay" id="successOverlay" aria-hidden="true"><div class="order-success-panel" role="dialog" aria-modal="true" aria-labelledby="successTitle"><div class="order-success-icon"><i class="fas fa-check" aria-hidden="true"></i></div><h3 id="successTitle">Order confirmed</h3><p id="successOrderId"></p><div class="order-success-summary" id="successSummary"></div><div class="order-success-actions"><button class="btn btn-primary" id="successWhatsApp"><i class="fab fa-whatsapp"></i> Send to WhatsApp</button><button class="btn btn-outline" onclick="closeSuccessModal()">Continue shopping</button></div></div></div>
+
+<!-- WEBSITE SUPPORT CHAT -->
+<section class="support-chat-panel" id="supportChatPanel" role="dialog" aria-modal="false" aria-labelledby="supportChatTitle" hidden>
+  <header class="support-chat-header">
+    <div class="support-chat-brand">
+      <span class="support-chat-mark" aria-hidden="true">SK</span>
+      <div><h2 id="supportChatTitle">SK Graphics AI Support</h2><p>AI help for orders, products &amp; printing</p></div>
+    </div>
+    <button class="support-chat-close" id="supportChatClose" type="button" aria-label="Close support chat">×</button>
+  </header>
+  <div class="support-chat-log" id="supportChatLog" role="log" aria-live="polite" aria-relevant="additions text"></div>
+  <form class="support-chat-order-form" id="supportOrderForm" hidden>
+    <label for="supportOrderPhone">Phone number used for your order</label>
+    <div class="support-chat-input-row">
+      <input id="supportOrderPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="e.g. 98765 43210" required>
+      <button type="submit" id="supportOrderSubmit">Check status</button>
+    </div>
+    <p class="support-chat-form-status" id="supportOrderStatus" aria-live="polite"></p>
+  </form>
+  <form class="support-chat-order-form" id="supportAskForm">
+    <label for="supportQuestion">Ask the AI assistant</label>
+    <div class="support-chat-input-row"><input id="supportQuestion" type="text" maxlength="600" placeholder="Ask about orders, printing or delivery" required><button type="submit" id="supportAskSubmit">Send</button></div>
+    <p class="support-chat-form-status" id="supportAskStatus" aria-live="polite"></p>
+  </form>
+  <nav class="support-chat-menu" aria-label="Permanent support options">
+    <button type="button" data-support-action="track">Track an order</button>
+    <button type="button" data-support-action="products">Products &amp; printing</button>
+    <button type="button" data-support-action="delivery">Delivery &amp; timing</button>
+    <button type="button" data-support-action="artwork">Artwork help</button>
+  </nav>
+  <p class="support-chat-contact">Need a person? <a href="https://wa.me/918447459316" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="tel:+918447459316">Call</a> · <a href="mailto:shubhprinters88@gmail.com">Email</a></p>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<button type="button" class="wp-float support-chat-toggle" id="supportChatToggle" aria-label="Open SK Graphics support chat" aria-controls="supportChatPanel" aria-expanded="false" title="Open support chat">
+  <i class="fas fa-comments" aria-hidden="true"></i>
+</button>
+<button class="btt-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+  let cart = [];
+  let couponApplied = null;
+  async function parseResponse(response) { const text = await response.text(); try { return text ? JSON.parse(text) : {}; } catch (_) { return { message: `Server returned ${response.status}` }; } }
+  function escapeHtml(value) { return String(value ?? '').replace(/[&<>\"']/g, character => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '\"':'&quot;', "'":'&#39;' })[character]); }
+  function createOrderToken() { return (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : `sk_${Date.now()}_${Math.random().toString(36).slice(2)}`; }
+  let orderToken = createOrderToken();
+  const PRODUCT_CATALOG_WITH_SYNONYMS = [
+    { id:'business-cards', name:'Business Cards', description:'Standard, UV spot, foil, and premium finish options for lasting impressions.', synonyms:['visiting card','card','visting card','identity card','id card','name card','contact card','personal card','corporate card'] },
+    { id:'color-pamphlets', name:'Color Pamphlets', description:'Full-colour, double-sided flyers in A4, A5, A6 and custom sizes.', synonyms:['pamphlet','flyer','parcha','ad paper','leaflet','paper ad','handbill','marketing paper'] },
+    { id:'brochures', name:'Brochures', description:'Bi-fold, tri-fold and Z-fold brochures on premium art paper.', synonyms:['pamphlet folder','company profile','catalog booklet','bifold','trifold','booklet'] },
+    { id:'posters-banners', name:'Posters & Banners', description:'Vibrant large-format vinyl banners, posters, and flex prints for every event.', synonyms:['flex','flex printing','hoarding','banner','poster','wall poster','vinyl print','event banner'] },
+    { id:'custom-mugs', name:'Custom Mugs', description:'Personalized ceramic mugs — ideal corporate gifts with your logo or photo.', synonyms:['cup','coffee mug','photo mug','gift mug','personalized cup','printed mug'] },
+    { id:'stickers-labels', name:'Stickers & Labels', description:'Die-cut, roll, and sheet stickers in any shape — waterproof options available.', synonyms:['sticker','label','packaging sticker','product label','waterproof sticker','logo sticker','adhesive sheet'] },
+    { id:'custom-tshirts', name:'Custom T-Shirts', description:'Sublimation, DTG, and screen-printed t-shirts for events, teams, and gifting.', synonyms:['tshirt','t shirt','tee','printed shirt','custom shirt','team tshirt','event tshirt','kapda print'] },
+    { id:'roll-up-banners', name:'Roll-Up Banners', description:'Retractable standees for exhibitions, retail, and corporate events.', synonyms:['standee','flex standee','rollup','display stand','exhibition banner','vertical banner'] },
+    { id:'diaries-notebooks', name:'Diaries & Notebooks', description:'Custom-branded hardcover and softcover diaries, notepads, and planners.', synonyms:['diary','notebook','pad','register','planner','office diary','custom notepad'] },
+    { id:'presentation-folders', name:'Presentation Folders', description:'Premium printed folders for presentations, proposals, and corporate kits.', synonyms:['file folder','doc folder','paper file','presentation file','office folder','proposal file'] },
+    { id:'canvas-printing', name:'Canvas Printing', description:'Photo-quality canvas prints on stretched frames for homes, offices, and gifts.', synonyms:['photo frame','wall frame','canvas photo','wall art','painting print','stretched canvas'] },
+    { id:'fancy-boxes-packaging', name:'Fancy Boxes & Packaging', description:'Custom packaging, gift boxes, and carry bags with premium finishing options.', synonyms:['box','gift box','carry bag','paper bag','packaging box','sweet box','custom bag'] },
+    { id:'heat-shrink-sleeves', name:'Heat Shrink Sleeve Labels', description:'PVC and PETG shrink labels for water bottles, pickle jars, sauces, and cosmetics.', synonyms:['shrink sleeve','pinni','bottle label','pvc label','petg label','jar label'] },
+    { id:'stand-up-pouches', name:'Stand-Up Zip Lock Pouches', description:'Printed pouches for dry fruits, spices, tea, and snack packaging.', synonyms:['pouch','zip lock pouch','kraft pouch','spice pouch','tea pouch','snack pouch'] },
+    { id:'branded-packaging-tape', name:'Branded Packaging Tape', description:'Logo-printed cello tape for ecommerce shipping boxes and carton sealing.', synonyms:['packing tape','cello tape','carton tape','logo tape','shipping tape'] }
+  ];
+  const SEARCH_HISTORY_KEY = 'sk_graphics_search_history';
+  let searchHistory = [];
+  try { const storedHistory = JSON.parse(localStorage.getItem(SEARCH_HISTORY_KEY) || '[]'); searchHistory = Array.isArray(storedHistory) ? storedHistory.filter(item => typeof item === 'string' && item.trim()).slice(0, 8) : []; } catch (_) { searchHistory = []; }
+  const normalizeSearch = value => String(value || '').toLowerCase().trim().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ');
+  function persistSearchHistory() { try { localStorage.setItem(SEARCH_HISTORY_KEY, JSON.stringify(searchHistory)); } catch (_) {} }
+  function rememberSearch(query) { const value = String(query || '').trim().replace(/\s+/g, ' '); if (!value) return; searchHistory = [value, ...searchHistory.filter(item => normalizeSearch(item) !== normalizeSearch(value))].slice(0, 8); persistSearchHistory(); }
+  function removeSearchHistory(query) { searchHistory = searchHistory.filter(item => item !== query); persistSearchHistory(); renderSearchSuggestions(document.getElementById('productSearch')?.value || ''); document.getElementById('productSearch')?.focus(); }
+  function clearSearchHistory() { searchHistory = []; persistSearchHistory(); renderSearchSuggestions(document.getElementById('productSearch')?.value || ''); document.getElementById('productSearch')?.focus(); }
+  function editDistance(left, right) {
+    const row = Array.from({ length: right.length + 1 }, (_, index) => index);
+    for (let i = 1; i <= left.length; i += 1) {
+      let previous = row[0]; row[0] = i;
+      for (let j = 1; j <= right.length; j += 1) {
+        const current = row[j];
+        row[j] = left[i - 1] === right[j - 1] ? previous : 1 + Math.min(previous, row[j - 1], current);
+        previous = current;
+      }
+    }
+    return row[right.length];
+  }
+  function fuzzyMatches(query, haystack) {
+    const normalizedQuery = normalizeSearch(query);
+    if (!normalizedQuery) return true;
+    const words = normalizeSearch(haystack).split(' ').filter(Boolean);
+    return normalizedQuery.split(' ').every(queryWord => words.some(word => word.includes(queryWord) || editDistance(queryWord, word) <= (queryWord.length > 5 ? 2 : 1)));
+  }
+  function filterProductCatalog(query) {
+    const normalizedQuery = normalizeSearch(query);
+    const cards = [...document.querySelectorAll('#productGrid .cat-card')];
+    const note = document.getElementById('searchResultsNote');
+    let matches = 0;
+    cards.forEach((card, index) => {
+      const product = PRODUCT_CATALOG_WITH_SYNONYMS[index];
+      const haystack = product ? [product.name, product.description, ...product.synonyms].map(normalizeSearch).join(' ') : normalizeSearch(card.textContent);
+      const matched = fuzzyMatches(normalizedQuery, haystack);
+      card.classList.toggle('search-hidden', !matched);
+      if (matched) matches += 1;
+    });
+    if (note) {
+      note.textContent = normalizedQuery ? `${matches} product${matches === 1 ? '' : 's'} found` : '';
+      note.classList.toggle('visible', Boolean(normalizedQuery));
+    }
+  }
+  function setSearchMode(active) {
+    document.body.classList.toggle('search-mode', active);
+    document.querySelector('.hdr-search')?.classList.toggle('search-active', active);
+    document.getElementById('searchBackdrop')?.setAttribute('aria-hidden', String(!active));
+  }
+  function closeSearchMode() { setSearchMode(false); document.getElementById('productSearch')?.blur(); }
+  const mobileSearchMedia = window.matchMedia('(max-width: 900px)');
+  const isMobileSearch = () => mobileSearchMedia.matches;
+  mobileSearchMedia.addEventListener?.('change', () => { if (!isMobileSearch()) closeSearchMode(); else renderSearchSuggestions(document.getElementById('productSearch')?.value || ''); });
+  function renderSearchSuggestions(query) {
+    const box = document.getElementById('searchSuggestions');
+    if (!box) return;
+    const normalizedQuery = normalizeSearch(query);
+    if (!normalizedQuery) { box.innerHTML = ''; return; }
+    const history = searchHistory.filter(item => !normalizedQuery || fuzzyMatches(normalizedQuery, item));
+    const results = PRODUCT_CATALOG_WITH_SYNONYMS.filter(product => {
+      const haystack = [product.name, product.description, ...product.synonyms].map(normalizeSearch).join(' ');
+      return fuzzyMatches(normalizedQuery, haystack);
+    }).slice(0, 6);
+    const historyMarkup = history.length ? `<div class="search-history-heading search-history-heading-row"><span>Recent searches</span><button type="button" class="search-history-clear" data-clear-history>Clear History</button></div>${history.map(item => `<div class="search-history-item" role="option"><button type="button" class="search-history-query" data-history-query="${escapeHtml(item)}"><i class="fas fa-clock" aria-hidden="true"></i><span>${escapeHtml(item)}</span></button><button type="button" class="search-history-remove" data-remove-history="${escapeHtml(item)}" aria-label="Remove ${escapeHtml(item)} from search history"><i class="fas fa-times" aria-hidden="true"></i></button></div>`).join('')}` : '';
+    const resultMarkup = results.length ? `<div class="search-history-heading">Products</div>${results.map(product => `<button type="button" class="search-suggestion" role="option" data-product-id="${product.id}"><span><strong>${product.name}</strong><small>${product.description}</small></span></button>`).join('')}` : (normalizedQuery ? '<div class="search-no-result" role="status"><span>No matching products found</span><button type="button" class="search-no-result-clear" aria-label="Clear search">Clear</button></div>' : '');
+    box.innerHTML = historyMarkup + resultMarkup;
+    box.querySelector('.search-no-result-clear')?.addEventListener('click', clearProductSearch);
+    box.querySelector('[data-clear-history]')?.addEventListener('click', clearSearchHistory);
+    box.querySelectorAll('[data-product-id]').forEach(button => button.addEventListener('click', () => selectSearchProduct(button.dataset.productId)));
+    box.querySelectorAll('[data-history-query]').forEach(button => button.addEventListener('click', () => { const value = button.dataset.historyQuery || ''; const match = PRODUCT_CATALOG_WITH_SYNONYMS.find(product => fuzzyMatches(value, [product.name, ...product.synonyms].join(' '))); if (match) selectSearchProduct(match.id); else { const input = document.getElementById('productSearch'); if (input) { input.value = value; filterProductCatalog(value); } } }));
+    box.querySelectorAll('[data-remove-history]').forEach(button => button.addEventListener('click', event => { event.stopPropagation(); removeSearchHistory(button.dataset.removeHistory || ''); }));
+  }
+  function selectSearchProduct(productId) {
+    const product = PRODUCT_CATALOG_WITH_SYNONYMS.find(item => item.id === productId);
+    const input = document.getElementById('productSearch');
+    const note = document.getElementById('searchResultsNote');
+    if (!product || !input) return;
+    rememberSearch(input.value || product.name);
+    filterProductCatalog(product.name);
+    input.value = '';
+    input.closest('.hdr-search')?.classList.remove('has-query', 'search-active');
+    if (note) { note.textContent = ''; note.classList.remove('visible'); }
+    document.body.classList.remove('search-results-active', 'search-mode');
+    input.blur();
+    document.getElementById('products')?.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+  function clearProductSearch() {
+    const input = document.getElementById('productSearch');
+    if (!input) return;
+    input.value = '';
+    filterProductCatalog('');
+    input.closest('.hdr-search')?.classList.remove('has-query', 'search-active');
+    const suggestions = document.getElementById('searchSuggestions');
+    if (suggestions) suggestions.innerHTML = '';
+    document.body.classList.remove('search-results-active', 'search-mode');
+    input.blur();
+  }
+  function initProductSearch() {
+    const input = document.getElementById('productSearch');
+    if (!input) return;
+    const search = document.querySelector('.hdr-search');
+    const submit = document.querySelector('.search-submit');
+    input.addEventListener('input', () => { search?.classList.toggle('has-query', Boolean(input.value)); filterProductCatalog(input.value); renderSearchSuggestions(input.value); });
+    input.addEventListener('focus', () => { search?.classList.add('search-active'); setSearchMode(true); renderSearchSuggestions(input.value); });
+    input.addEventListener('keydown', event => { if (event.key === 'Escape') clearProductSearch(); if (event.key === 'Enter') { event.preventDefault(); const match = PRODUCT_CATALOG_WITH_SYNONYMS.find(product => normalizeSearch(product.name) === normalizeSearch(input.value)) || PRODUCT_CATALOG_WITH_SYNONYMS.find(product => [product.name, ...product.synonyms].some(term => normalizeSearch(term) === normalizeSearch(input.value))); if (match) selectSearchProduct(match.id); } });
+    document.querySelector('.search-clear')?.addEventListener('click', clearProductSearch);
+    submit?.addEventListener('click', () => { if (input.value.trim()) { const match = PRODUCT_CATALOG_WITH_SYNONYMS.find(product => fuzzyMatches(input.value, [product.name, ...product.synonyms].join(' '))); if (match) selectSearchProduct(match.id); else { input.value = ''; clearProductSearch(); } } else input.focus(); });
+    document.getElementById('searchBackdrop')?.addEventListener('click', () => { clearProductSearch(); });
+  }
+  function addToCart(name, price, bundle = '', customization = null) {
+    const lineName = bundle ? `${name} — ${bundle}` : name;
+    cart = cart.some(item => item.name === lineName)
+      ? cart.map(item => item.name === lineName ? { ...item, qty: item.qty + 1 } : item)
+      : [...cart, { name: lineName, price: Number(price) || 0, qty: 1, customization }];
+    updateCartUI();
+    openCart();
+  }
+
+  function updateCartUI() {
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('cartBadge').textContent = count;
+    const body = document.getElementById('cartBody');
+    const footer = document.getElementById('cartFooter');
+    if (!body || !footer) return;
+    if (!cart.length) { footer.style.display = 'none'; body.innerHTML = '<div class="cart-empty" id="cartEmpty"><i class="fas fa-shopping-cart" aria-hidden="true"></i><p>Your cart is empty.<br>Select any product to start.</p></div>'; return; }
+    footer.style.display = 'block'; body.innerHTML = '';
+    cart.forEach((item, index) => {
+      const div = document.createElement('div'); div.className = 'cart-line';
+      div.innerHTML = `<div><strong>${escapeHtml(item.name)}</strong><div class="cart-line-meta">₹${item.price} each · ₹${item.price * item.qty}</div></div><div class="cart-line-actions"><button class="qty-btn" onclick="changeCartQty(${index},-1)" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button class="qty-btn" onclick="changeCartQty(${index},1)" aria-label="Increase quantity">+</button><button class="remove-btn" onclick="removeCartItem(${index})" aria-label="Remove ${escapeHtml(item.name)}"><i class="fas fa-trash"></i></button></div>`;
+      body.appendChild(div);
+    });
+    document.getElementById('cartTotalAmt').textContent = '₹' + cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  }
+
+  function changeCartQty(index, amount) {
+    if (!cart[index]) return;
+    cart = cart.map((item, itemIndex) => itemIndex === index ? { ...item, qty: item.qty + amount } : item).filter(item => item.qty > 0);
+    updateCartUI();
+  }
+  function removeCartItem(index) { cart = cart.filter((_, itemIndex) => itemIndex !== index); updateCartUI(); }
+
+  let selectedOption = null;
+  let optionChoices = [];
+  function openProductOptions(name) {
+    const isCards = name === 'Business Cards';
+    selectedOption = isCards ? { name, price: 399, bundle: '50 single-sided cards', finish: 'Standard', finishKind: 'standard', requiresQuote: false } : { name, price: 600, bundle: '100 pamphlets' };
+    const singleChoices = [{label:'50 Cards', price:399, bundle:'50 single-sided cards'}, {label:'100 Cards', price:599, bundle:'100 single-sided cards'}, {label:'200 Cards', price:999, bundle:'200 single-sided cards'}];
+    const doubleChoices = [{label:'100 Cards (Double-sided)', price:799, bundle:'100 double-sided cards'}, {label:'200 Cards (Double-sided)', price:1399, bundle:'200 double-sided cards'}];
+    optionChoices = isCards ? singleChoices : [{label:'100 Pamphlets', price:600, bundle:'100 pamphlets'}];
+    document.getElementById('optionsTitle').textContent = `${name} options`;
+    const dropdowns = isCards ? `<div class="option-group"><label for="singleOption">Single-sided options</label><select class="option-select" id="singleOption" onchange="selectProductOption('single', this.value)">${singleChoices.map((choice, index) => `<option value="${index}">${choice.label} - ₹${choice.price}</option>`).join('')}</select></div><div class="option-group"><label for="doubleOption">Double-sided options</label><select class="option-select" id="doubleOption" onchange="selectProductOption('double', this.value)"><option value="">Choose double-sided package</option>${doubleChoices.map((choice, index) => `<option value="${index}">${choice.label} - ₹${choice.price}</option>`).join('')}</select></div>` : `<div class="option-group"><label for="singleOption">Quantity</label><select class="option-select" id="singleOption" onchange="selectProductOption('single', this.value)">${optionChoices.map((choice, index) => `<option value="${index}">${choice.label} - ₹${choice.price}</option>`).join('')}</select></div>`;
+    optionChoices = { single: singleChoices, double: doubleChoices };
+    const finishOptions = isCards ? `<div class="option-group"><label for="cardFinish">Card finish</label><select class="option-select" id="cardFinish" onchange="selectCardFinish(this.value)"><option value="standard">Standard finish · included</option><option value="uv-spot">UV Spot · request quote</option><option value="gold-foil">Gold Foil · request quote</option><option value="silver-foil">Silver Foil · request quote</option><option value="glossy-foil">Glossy Foil · request quote</option><option value="custom">Other finish · request quote</option></select><p class="option-description" id="cardFinishDescription" aria-live="polite">Standard finish is included in the listed package price.</p></div>` : '';
+    document.getElementById('optionsBody').innerHTML = dropdowns + finishOptions;
+    document.getElementById('optionsBody').insertAdjacentHTML('beforeend', `<div class="custom-fields"><label class="custom-check"><input type="checkbox" id="hasDesign" onchange="toggleUploadField('designUpload', this.checked)"><span><strong>Already Have Your Design?</strong><small> Upload PNG, JPG or PDF artwork if it is print-ready.</small></span></label><label class="upload-zone" id="designUpload" hidden>Choose your design file<input type="file" id="designFile" accept="image/png,image/jpeg,image/webp,application/pdf" onchange="readCustomizationFile('designFile','designFileData','designPreview')"></label><input type="hidden" id="designFileData"><div class="file-preview" id="designPreview"></div><label class="custom-check"><input type="checkbox" id="addExtraAsset" onchange="toggleUploadField('extraUpload', this.checked)"><span><strong>Add Extra Photo or Logo?</strong><small> Add a secondary image or brand mark.</small></span></label><label class="upload-zone" id="extraUpload" hidden>Choose photo or logo<input type="file" id="extraFile" accept="image/png,image/jpeg,image/webp,application/pdf" onchange="readCustomizationFile('extraFile','extraFileData','extraPreview')"></label><input type="hidden" id="extraFileData"><div class="file-preview" id="extraPreview"></div><label for="fontStyle"><strong>Font style</strong><select id="fontStyle"><option>Arial</option><option>Cursive / Brush Script</option><option>Times New Roman</option><option>Montserrat</option><option>Poppins</option><option>Roboto</option><option>Great Vibes</option><option>Courier New</option><option>Georgia</option><option>Verdana</option><option>Comic Sans MS</option><option>Impact</option></select></label><label for="printText" style="display:block;margin-top:14px"><strong>What to Print</strong><textarea id="printText" placeholder="Type names, phone numbers, shop name or printing instructions..."></textarea></label></div>`); updateOptionsPrice(); document.getElementById('optionsOverlay').classList.add('open'); syncOverlayScrollLock();
+  }
+  function selectProductOption(side, value) { const choices = optionChoices[side] || []; if (value === '') { selectedOption = { ...selectedOption, price: choices[0]?.price || 0, bundle: choices[0]?.bundle || '' }; } else { selectedOption = { ...selectedOption, ...choices[Number(value)] }; } if (side === 'single' && document.getElementById('doubleOption')) document.getElementById('doubleOption').value = ''; if (side === 'double' && document.getElementById('singleOption')) document.getElementById('singleOption').value = ''; updateOptionsPrice(); }
+  function selectCardFinish(value) {
+    const finishes = { standard: { finish: 'Standard', finishKind: 'standard', requiresQuote: false }, 'uv-spot': { finish: 'UV Spot', finishKind: 'uv-spot', requiresQuote: true }, 'gold-foil': { finish: 'Gold Foil', finishKind: 'gold-foil', requiresQuote: true }, 'silver-foil': { finish: 'Silver Foil', finishKind: 'silver-foil', requiresQuote: true }, 'glossy-foil': { finish: 'Glossy Foil', finishKind: 'glossy-foil', requiresQuote: true }, custom: { finish: 'Other custom finish', finishKind: 'custom', requiresQuote: true } };
+    selectedOption = { ...selectedOption, ...(finishes[value] || finishes.standard) };
+    updateOptionsPrice();
+  }
+  function updateOptionsPrice() {
+    const needsQuote = Boolean(selectedOption?.requiresQuote);
+    document.getElementById('optionsPriceLabel').textContent = needsQuote ? 'Finish pricing' : 'Package price';
+    document.getElementById('optionsPrice').textContent = needsQuote ? 'Confirm by WhatsApp' : `₹${selectedOption?.price || 0}`;
+    const description = document.getElementById('cardFinishDescription');
+    if (description) description.textContent = needsQuote ? `${selectedOption.finish} pricing depends on the artwork and quantity. Our team will confirm the final price before checkout.` : 'Standard finish is included in the listed package price.';
+    const confirmButton = document.getElementById('optionsConfirmButton');
+    confirmButton.innerHTML = needsQuote ? '<i class="fab fa-whatsapp" aria-hidden="true"></i> Request a finish quote' : '<i class="fas fa-cart-plus" aria-hidden="true"></i> Confirm &amp; Add to Cart';
+  }
+  function toggleUploadField(id, visible) { document.getElementById(id).hidden = !visible; }
+async function readCustomizationFile(inputId, outputId, previewId) { const file = document.getElementById(inputId).files[0]; if (!file) return; const allowed = ['application/pdf','application/postscript','image/png','image/jpeg']; const extension = file.name.toLowerCase().split('.').pop(); if (!allowed.includes(file.type) && !['pdf','ai','psd','png','jpg','jpeg'].includes(extension)) { document.getElementById(inputId).value = ''; return alert('Only PDF, AI, PSD, PNG and JPG artwork files are allowed.'); } if (file.size > 15 * 1024 * 1024) { document.getElementById(inputId).value = ''; return alert('Please choose a file smaller than 15MB.'); } try { const dataUrl = file.type.startsWith('image/') ? await compressImage(file) : await readFileAsDataUrl(file); if (dataUrl.length > 70 * 1024 * 1024) throw new Error('Please choose a smaller file (maximum 50MB).'); const response = await fetch('/api/uploads', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ data:dataUrl, mimeType:file.type }) }); const result = await parseResponse(response); if (!response.ok) throw new Error(result.message || 'Upload failed'); document.getElementById(outputId).value = result.url; const preview = document.getElementById(previewId); preview.innerHTML = `<img decoding="async" src="${file.type.startsWith('image/') ? dataUrl : 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="64" height="50"%3E%3Crect width="64" height="50" rx="7" fill="%23edf7fd"/%3E%3Ctext x="32" y="30" text-anchor="middle" font-size="12" fill="%232579a9"%3EPDF%3C/text%3E%3C/svg%3E'}" alt="Uploaded file preview"><span>${escapeHtml(file.name)}</span><button type="button" onclick="clearCustomizationFile('${inputId}','${outputId}','${previewId}')">Remove</button>`; } catch (error) { document.getElementById(inputId).value = ''; alert(error.message || 'Could not upload file'); } }
+function readFileAsDataUrl(file) { return new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(file); }); }
+function compressImage(file) { return new Promise((resolve, reject) => { const image = new Image(); const objectUrl = URL.createObjectURL(file); image.onload = () => { const scale = Math.min(1, 1600 / Math.max(image.width, image.height)); const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(image.width * scale)); canvas.height = Math.max(1, Math.round(image.height * scale)); canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height); URL.revokeObjectURL(objectUrl); resolve(canvas.toDataURL('image/jpeg', 0.78)); }; image.onerror = () => { URL.revokeObjectURL(objectUrl); reject(new Error('Image could not be read')); }; image.src = objectUrl; }); }
+function clearCustomizationFile(inputId, outputId, previewId) { document.getElementById(inputId).value = ''; document.getElementById(outputId).value = ''; document.getElementById(previewId).innerHTML = ''; }
+function confirmProductOption() { if (!selectedOption) return; const customization = { hasDesign: document.getElementById('hasDesign')?.checked || false, addExtraAsset: document.getElementById('addExtraAsset')?.checked || false, fontStyle: document.getElementById('fontStyle')?.value || 'Arial', printText: document.getElementById('printText')?.value.trim() || '', designFile: document.getElementById('designFileData')?.value || '', extraAsset: document.getElementById('extraFileData')?.value || '' }; addToCart(selectedOption.name, selectedOption.price, selectedOption.finish ? `${selectedOption.bundle} · ${selectedOption.finish}` : selectedOption.bundle, customization); closeProductOptions(); }
+  function closeProductOptions() { document.getElementById('optionsOverlay').classList.remove('open'); syncOverlayScrollLock(); }
+  function syncOverlayScrollLock() {
+    const hasOpenOverlay = [...document.querySelectorAll('.cart-overlay, .order-overlay, .mug-overlay, .options-overlay, .mobile-nav-overlay')].some(overlay => overlay.classList.contains('open'));
+    document.body.classList.toggle('modal-open', hasOpenOverlay);
+  }
+  function toggleMobileNav() {
+    const overlay = document.getElementById('mobileNavOverlay');
+    const toggle = document.querySelector('.mob-toggle');
+    const isOpen = overlay.classList.toggle('open');
+    toggle?.setAttribute('aria-expanded', String(isOpen));
+    syncOverlayScrollLock();
+  }
+  function openCart() { document.getElementById('cartOverlay').classList.add('open'); syncOverlayScrollLock(); }
+  function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); syncOverlayScrollLock(); }
+  function openOrderModal() { closeCart(); document.getElementById('orderOverlay').classList.add('open'); updateCheckoutTotals(); syncOverlayScrollLock(); }
+  function closeOrderModal() { document.getElementById('orderOverlay').classList.remove('open'); syncOverlayScrollLock(); }
+
+  const PRODUCT_CONFIGS = {
+    'Brochures': { base: 4, qty: [100,250,500,1000,2500,5000], fields: [['paper','Paper Type / GSM',['130 GSM Gloss','170 GSM Matt','250 GSM Gloss','250 GSM Matt']],['fold','Fold Type',['Bi-fold','Tri-fold','Z-fold']] ] },
+    'Posters & Banners': { base: 35, qty: [1,2,5,10,50], fields: [['material','Material',['Star Flex','Normal Flex','Vinyl Print','Backlit Film']],['size','Size',['2x3 ft','3x6 ft','4x8 ft','Custom size']],['finish','Finishing',['Eyelets / Grommets','Mounting','Stitched edges','None']] ] },
+    'Custom Mugs': { base: 199, qty: [1,10,50,100,500], fields: [['mug','Mug Type',['White Ceramic','Magic Color Changing','Inner Color Accent','Handle Accent']],['printArea','Print Area',['Single Side Logo','Both Sides','360 Full Wrap']],['packaging','Packaging',['Standard White Box','Gift Box Packaging']] ] },
+    'Stickers & Labels': { base: 1.49, qty: [100,500,1000,5000], fields: [['sticker','Sticker Type',['Vinyl Waterproof','Paper Gloss','Transparent','Metallic Foil']],['shape','Cut Shape',['Die-cut Custom','Round','Square','Rectangle','Roll Form']],['size','Size',['2x2 in','3x3 in','4x6 in','Custom size']] ] },
+    'Custom T-Shirts': { base: 299, qty: [5,10,25,50,100,500], fields: [['fabric','Fabric Material',['100% Cotton','Polyester','Dry-fit','Bio-wash Cotton']],['placement','Print Placement',['Front Left Chest','Front Full','Back Full','Both Sides']],['color','Color',['White','Black','Navy Blue','Red','Yellow']] ], matrix: true },
+    'Roll-Up Banners': { base: 1299, qty: [1,2,5,10], fields: [['standee','Standee Type',['Standard Aluminum Base','Heavy Luxury Base','Table-top Standee']],['media','Media Material',['Flex','Star Flex','Non-curl Satin Fabric','High-Res Vinyl']],['size','Size',['2x5 ft','2.5x6 ft','3x6 ft']] ] },
+    'Diaries & Notebooks': { base: 299, qty: [25,50,100,500], fields: [['cover','Cover Type',['Leatherette Hardcover','Premium Softcover','Wiro Bound']],['inner','Inner Pages',['Rule / Line','Blank','Grid','Custom Watermark Logo Pages']],['branding','Branding Type',['Debossing','Gold / Silver Foil Stamping','Full UV Print']] ] },
+    'Presentation Folders': { base: 349, qty: [100,250,500,1000], fields: [['stock','Paper Stock',['300 GSM','350 GSM Art Card']],['pocket','Pocket Style',['Single Pocket','Double Pocket','Business Card Slot Included']],['lamination','Lamination',['Gloss','Velvet Soft-touch','Matt Lamination']] ] },
+    'Canvas Printing': { base: 799, qty: [1,2,5,10], fields: [['quality','Canvas Quality',['Cotton Canvas','Poly-Canvas','Museum Grade']],['mounting','Frame / Mounting',['0.75in Gallery Wrap','1.5in Deep Wrap','Unstretched Roll']],['size','Size',['8x10 in','12x18 in','18x24 in','24x36 in','Custom size']] ] },
+    'Fancy Boxes & Packaging': { base: 499, qty: [100,500,1000,5000], fields: [['material','Material',['Rigid Box','Corrugated Board','Kraft Eco-Paper','Art Paper Bag']],['finish','Finish Options',['Spot UV','Metallic Foiling','Embossing','Window Cutout']],['dimensions','Dimensions',['6x6x3 in','8x8x4 in','10x8x4 in','Custom dimensions']] ] },
+    'Custom Heat Shrink Sleeve Labels': { base: 2.5, setupFee: 50, qty: [300,500,1000,5000], tierPrices: {300:2.5,500:1.8,1000:1.2,5000:.75}, bonus:'First Order Bonus Applied', fields: [['material','Material',['PVC Shrink 30 Micron','PETG Eco-Shrink Film']],['finish','Finish',['Gloss Finish','Matte Finish']],['size','Size',['200ml Bottle','500ml Bottle','1 Litre Bottle','Custom Jar Diameter']] ] },
+    'Custom Stand-Up Zip Lock Pouches': { base: 8.5, qty: [300,500,1000], tierPrices: {300:8.5,500:6.8,1000:5.2}, fields: [['material','Material',['Brown Kraft Paper','Matte Black Foil','Metallic Silver']],['application','Application',['Dry Fruits','Spices','Tea','Snacks Packaging']] ] },
+    'Custom Branded Packaging Tape': { base: 180, qty: [24,48,96], tierPrices: {24:180,48:150,96:115}, unitLabel:'rolls', fields: [['width','Width',['2 inch (48mm)','3 inch (72mm)']],['print','Print coverage',['Repeating Logo Pattern','Logo + Contact Details']] ] }
+  };
+  const safeOptionLabel = value => String(value).replace(/[<>"']/g, '');
+  function configFieldMarkup([key, label, choices]) { return `<div class="option-group"><label for="config-${key}">${label}</label><select class="option-select config-control" id="config-${key}" data-config-key="${key}">${choices.map(choice => `<option value="${safeOptionLabel(choice)}">${safeOptionLabel(choice)}</option>`).join('')}</select></div>`; }
+  function renderConfigFields(config) { const fields = config.fields.map(configFieldMarkup).join(''); const qty = `<div class="option-group"><label for="config-quantity">Quantity</label><select class="option-select config-control" id="config-quantity" data-config-key="quantity">${config.qty.map(value => `<option value="${value}">${value >= 5000 ? `${value}+` : value}</option>`).join('')}</select></div>`; const matrix = config.matrix ? `<div class="option-group"><label>Size Breakdown (optional)</label><div class="size-matrix">${['S','M','L','XL','XXL'].map(size => `<label>${size}<input class="size-input" type="number" min="0" max="999" value="0" data-size="${size}"></label>`).join('')}</div></div>` : ''; return fields + qty + matrix; }
+  function renderDesignIntake(config) { return `<div class="custom-fields"><div class="option-group"><label for="config-design">Artwork / Design status</label><select class="option-select config-control" id="config-design" data-config-key="design"><option value="upload">Upload ready design</option><option value="designer">Need SK Graphics designer (+₹199)</option></select></div><div id="design-support-fields" hidden><label for="companyName">Company name &amp; slogan</label><input id="companyName" class="text-input" maxlength="160" placeholder="Company name and tagline"><label for="colorTheme">Preferred colour theme</label><input id="colorTheme" class="text-input" maxlength="80" placeholder="e.g. navy, white and gold"><label for="designInstructions">Additional instructions</label><textarea id="designInstructions" maxlength="2000" placeholder="Tell us about your design requirements"></textarea></div><label class="upload-zone" id="designUpload">Upload artwork (PDF, AI, PSD, PNG, JPG up to 50MB)<input type="file" id="designFile" accept=".pdf,.ai,.psd,image/png,image/jpeg,image/webp" onchange="readCustomizationFile('designFile','designFileData','designPreview')"></label><input type="hidden" id="designFileData"><div class="file-preview" id="designPreview"></div><label class="upload-zone" id="extraUpload">Reference logo / sample (optional)<input type="file" id="extraFile" accept=".pdf,.ai,.psd,image/png,image/jpeg,image/webp" onchange="readCustomizationFile('extraFile','extraFileData','extraPreview')"></label><input type="hidden" id="extraFileData"><div class="file-preview" id="extraPreview"></div><label for="fontStyle"><strong>Font style</strong><select id="fontStyle" class="option-select"><option>Arial</option><option>Montserrat</option><option>Poppins</option><option>Roboto</option><option>Great Vibes</option></select></label><label for="printText" style="display:block;margin-top:14px"><strong>Print instructions</strong><textarea id="printText" maxlength="2000" placeholder="Type names, phone numbers, shop name or printing instructions..."></textarea></label></div>`; }
+  function openConfiguredProductOptions(name) { const config = PRODUCT_CONFIGS[name]; if (!config) return openProductOptions(name); selectedOption = { name, price: config.base, bundle: `${config.qty[0]} units`, config }; document.getElementById('optionsTitle').textContent = `${name} options`; document.getElementById('optionsBody').innerHTML = renderConfigFields(config) + renderDesignIntake(config) + '<p id="bulkSaving" class="bulk-saving" aria-live="polite"></p>'; document.getElementById('optionsBody').querySelector('[data-config-key="design"]')?.addEventListener('change', event => { document.getElementById('design-support-fields').hidden = event.target.value !== 'designer'; }); document.getElementById('optionsBody').querySelectorAll('.config-control').forEach(control => control.addEventListener('change', updateConfiguredOption)); updateConfiguredOption(); document.getElementById('optionsOverlay').classList.add('open'); syncOverlayScrollLock(); }
+  function readConfiguredValues() { const config = selectedOption?.config; const values = {}; config?.fields.forEach(([key]) => { values[key] = document.getElementById(`config-${key}`)?.value || ''; }); values.quantity = Number(document.getElementById('config-quantity')?.value || config?.qty[0] || 1); values.design = document.getElementById('config-design')?.value || 'upload'; values.sizeBreakdown = {}; document.querySelectorAll('[data-size]').forEach(input => { values.sizeBreakdown[input.dataset.size] = Math.max(0, Math.min(999, Number(input.value) || 0)); }); const matrixTotal = Object.values(values.sizeBreakdown).reduce((sum, value) => sum + value, 0); if (config?.matrix && matrixTotal > 0) values.quantity = matrixTotal; return values; }
+  function updateConfiguredOption() { if (!selectedOption?.config) return; const values = readConfiguredValues(); const config = selectedOption.config; const chosen = Object.values(values).join(' ').toLowerCase(); const tierQty = [...config.qty].reverse().find(value => values.quantity >= value) || config.qty[0]; let multiplier = 1; if (chosen.includes('250 gsm') || chosen.includes('museum') || chosen.includes('luxury') || chosen.includes('metallic') || chosen.includes('gift box')) multiplier += .35; if (chosen.includes('double') || chosen.includes('both') || chosen.includes('full wrap')) multiplier += .25; if (chosen.includes('designer')) multiplier += 199 / Math.max(config.base * values.quantity, 1); const areaMatch = String(values.size || '').match(/(\d+(?:\.\d+)?)x(\d+(?:\.\d+)?)/); const areaMultiplier = nameIs('Posters & Banners') && areaMatch ? Math.max(1, Number(areaMatch[1]) * Number(areaMatch[2]) / 6) : 1; const unitPrice = config.tierPrices?.[tierQty] || config.base; const total = Math.max(1, Math.round((unitPrice * values.quantity * multiplier) + (config.setupFee || 0))); selectedOption = { ...selectedOption, price: total, bundle: `${values.quantity} ${config.unitLabel || 'units'}`, configValues: values }; updateOptionsPrice(); const savings = config.tierPrices ? Math.max(0, Math.round((config.base - unitPrice) * values.quantity)) : (values.quantity >= 1000 ? Math.round(total * .25) : values.quantity >= 500 ? Math.round(total * .15) : 0); const savingNode = document.getElementById('bulkSaving'); if (savingNode) savingNode.textContent = `${config.bonus ? config.bonus + ' · ' : ''}${savings ? `Bulk discount: ₹${savings} saved` : 'Bulk discount unlocks at the next quantity tier'}`; }
+  function nameIs(name) { return selectedOption?.name === name; }
+  function updateOptionsPrice() {
+    const needsQuote = Boolean(selectedOption?.requiresQuote);
+    document.getElementById('optionsPriceLabel').textContent = needsQuote ? 'Finish pricing' : 'Package price';
+    document.getElementById('optionsPrice').textContent = needsQuote ? 'Confirm by WhatsApp' : `₹${selectedOption?.price || 0}`;
+    const description = document.getElementById('cardFinishDescription');
+    if (description) description.textContent = needsQuote ? `${selectedOption.finish} pricing depends on the artwork and quantity. Our team will confirm the final price before checkout.` : 'Standard finish is included in the listed package price.';
+    const confirmButton = document.getElementById('optionsConfirmButton');
+    confirmButton.innerHTML = needsQuote ? '<i class="fab fa-whatsapp" aria-hidden="true"></i> Request a finish quote' : '<i class="fas fa-cart-plus" aria-hidden="true"></i> Confirm &amp; Add to Cart';
+  }
+  function confirmConfiguredProductOption() { if (!selectedOption) return; const config = selectedOption.config; const values = readConfiguredValues(); const designer = values.design === 'designer'; const customization = { hasDesign: !designer, addExtraAsset: Boolean(document.getElementById('extraFileData')?.value), fontStyle: document.getElementById('fontStyle')?.value || 'Arial', printText: [document.getElementById('printText')?.value, designer ? `Company: ${document.getElementById('companyName')?.value || ''}; Theme: ${document.getElementById('colorTheme')?.value || ''}; ${document.getElementById('designInstructions')?.value || ''}` : ''].filter(Boolean).join(' ').slice(0, 2000), designFile: document.getElementById('designFileData')?.value || '', extraAsset: document.getElementById('extraFileData')?.value || '', options: values, tierDiscount: config.tierPrices ? Math.max(0, Math.round((config.base * values.quantity) - selectedOption.price + (config.setupFee || 0))) : 0 }; addToCart(selectedOption.name, selectedOption.price, selectedOption.finish ? `${selectedOption.bundle} · ${selectedOption.finish}` : selectedOption.bundle, customization); closeProductOptions(); }
+  function confirmProductOption() { if (selectedOption?.config) return confirmConfiguredProductOption(); if (!selectedOption) return; if (selectedOption.requiresQuote) { const message = `Hello SK Graphics, please quote ${selectedOption.bundle} business cards with ${selectedOption.finish} finish. Please confirm the final price and availability.`; window.open(`https://wa.me/918447459316?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer'); closeProductOptions(); return; } const customization = { hasDesign: document.getElementById('hasDesign')?.checked || false, addExtraAsset: document.getElementById('addExtraAsset')?.checked || false, fontStyle: document.getElementById('fontStyle')?.value || 'Arial', printText: document.getElementById('printText')?.value.trim() || '', designFile: document.getElementById('designFileData')?.value || '', extraAsset: document.getElementById('extraFileData')?.value || '' }; addToCart(selectedOption.name, selectedOption.price, selectedOption.finish ? `${selectedOption.bundle} · ${selectedOption.finish}` : selectedOption.bundle, customization); closeProductOptions(); }
+  let verifiedPayment = null;
+  let paymentInProgress = false;
+  let orderSubmissionInProgress = false;
+  let razorpayLoaderPromise = null;
+  function resetPaymentState() {
+    paymentInProgress = false;
+    document.querySelectorAll('#upiPaymentPanel .btn').forEach(item => { item.disabled = false; item.classList.remove('is-loading'); });
+    const button = document.getElementById('orderSubmitBtn');
+    if (button) button.disabled = false;
+  }
+  function loadRazorpay() {
+    if (window.Razorpay) return Promise.resolve(window.Razorpay);
+    if (razorpayLoaderPromise) return razorpayLoaderPromise;
+    razorpayLoaderPromise = new Promise((resolve, reject) => {
+      const existing = document.querySelector('script[data-razorpay-checkout]');
+      const script = existing || document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.async = true;
+      script.dataset.razorpayCheckout = 'true';
+      script.onload = () => window.Razorpay ? resolve(window.Razorpay) : reject(new Error('Payment checkout did not load.'));
+      script.onerror = () => reject(new Error('Secure payment could not load. Check your connection and try again.'));
+      if (!existing) document.head.appendChild(script);
+    });
+    return razorpayLoaderPromise;
+  }
+  function getCartSubtotal() { return cart.reduce((sum, item) => sum + item.price * item.qty, 0); }
+ function getCheckoutBreakdown() { const subtotal=getCartSubtotal(); const tierDiscount=cart.reduce((sum,item)=>sum+Math.max(0,Number(item.customization?.tierDiscount||0)),0); const coupons=couponApplied?.coupons||[]; const couponDiscount=coupons.reduce((sum,coupon)=>sum+Math.max(0,Number(coupon.discountAmount||0)),0); return {subtotal,tierDiscount,coupons,couponDiscount,total:Math.max(0,subtotal-tierDiscount-couponDiscount)}; }
+ function getCartTotal() { return getCheckoutBreakdown().total; }
+ function updateCheckoutTotals() { const breakdown=getCheckoutBreakdown(); document.getElementById('checkoutSubtotal')?.replaceChildren(document.createTextNode(`₹${breakdown.subtotal}`)); document.getElementById('checkoutTierDiscount')?.replaceChildren(document.createTextNode(`−₹${breakdown.tierDiscount}`)); document.getElementById('bulkDiscountRow').hidden=breakdown.tierDiscount<=0; document.getElementById('couponBreakdown').innerHTML=breakdown.coupons.map(coupon=>`<div class="billing-line"><span>Coupon applied: ${escapeHtml(coupon.code)}</span><strong>−₹${Number(coupon.discountAmount)}</strong></div>`).join(''); document.getElementById('checkoutTotal')?.replaceChildren(document.createTextNode(`₹${breakdown.total}`)); }
+ async function applyCoupon(inputId='couponCode') { const input=document.getElementById(inputId); const code=input?.value.trim().toUpperCase(); const message=document.getElementById('couponMessage'); const button=input?.parentElement.querySelector('button'); if (!code) { message.textContent='Enter a coupon code first.'; message.className='coupon-message error'; input?.focus(); return; } if ((couponApplied?.codes||[]).includes(code)) { message.textContent='Invalid or Already Used Coupon'; message.className='coupon-message error'; return; } if ((couponApplied?.codes||[]).length>=2) return; button.disabled=true; try { const remaining=Math.max(0,getCartSubtotal()-getCheckoutBreakdown().tierDiscount-(couponApplied?.discountAmount||0)); const response=await fetch('/api/coupons/validate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,subtotal:remaining,reservationId:orderToken})}); const result=await parseResponse(response); if (!response.ok) throw new Error(result.message||'Invalid or Already Used Coupon'); const applied=result.coupons[0]; couponApplied=couponApplied||{codes:[],coupons:[],discountAmount:0}; couponApplied.codes.push(applied.code); couponApplied.coupons.push(applied); couponApplied.discountAmount+=Number(applied.discountAmount); input.readOnly=true; button.textContent='Applied'; button.disabled=true; const chip=document.createElement('div'); chip.className='coupon-applied-chip'; chip.textContent=`Discount applied: −₹${applied.discountAmount}`; input.parentElement.insertAdjacentElement('afterend',chip); message.textContent=''; message.className='coupon-message'; if (couponApplied.codes.length===1) { document.getElementById('nextCouponInput').innerHTML='<div class="coupon-next-row"><input id="couponCode2" type="text" maxlength="40" autocomplete="off" placeholder="Second coupon (optional)" aria-label="Second coupon code"><button type="button" class="btn btn-outline" onclick="applyCoupon(\'couponCode2\')">Submit</button></div>'; } else { document.getElementById('nextCouponInput').replaceChildren(); } updateCheckoutTotals(); } catch(error) { if (button) button.disabled=false; message.textContent='Invalid or Already Used Coupon'; message.className='coupon-message error'; } finally { if (button && !input.readOnly) button.disabled=false; } }
+  function updatePaymentPanel() { const isOnline = document.getElementById('paymentMethod').value !== 'COD'; document.getElementById('upiPaymentPanel').hidden = !isOnline; if (!isOnline) { verifiedPayment = null; resetPaymentState(); } }
+  function updateFirstOrderBadge() {
+    const badge = document.getElementById('firstOrderBadge');
+    if (!badge) return;
+    try { badge.hidden = localStorage.getItem('sk_graphics_order_completed') === 'true'; } catch (_) { badge.hidden = false; }
+  }
+  async function startRazorpayPayment(preferredMethod = 'upi') { if (paymentInProgress) return; if (!cart.length) return alert('Add a product before starting payment.'); paymentInProgress = true; const buttons = [...document.querySelectorAll('#upiPaymentPanel .btn')]; buttons.forEach(button => { button.disabled = true; button.classList.add('is-loading'); }); const button = document.getElementById('orderSubmitBtn'); button.disabled = true; try { await loadRazorpay(); const response = await fetch('/api/create-order', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ amount: Math.round(getCartTotal() * 100), bulkDiscount:getCheckoutBreakdown().tierDiscount, claimToken:orderToken, items: cart.map(item => ({ name:item.name, price:item.price, qty:item.qty })), couponCodes: couponApplied?.codes || [], idempotencyKey: orderToken }) }); const order = await parseResponse(response); if (!response.ok) throw new Error(order.message || 'Unable to start payment'); if (order.simulated) { verifiedPayment={ paymentStatus:'paid', transactionId:`sim_${Date.now()}`, razorpayOrderId:order.orderId }; resetPaymentState(); document.getElementById('orderForm').requestSubmit(); return; } const razorpay = new Razorpay({ key: order.keyId, amount: order.amount, currency: order.currency, name:'SK Graphics', description:'SK Graphics order', order_id:order.orderId, config: preferredMethod === 'qr' ? { display: { blocks: { upi: { name: 'Scan QR with any UPI app', instruments: [{ method: 'upi' }] } }, sequence: ['block.upi'], preferences: { show_default_blocks: false } } } : undefined, handler: async function (payment) { try { const verified = await fetch('/api/payments/verify', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payment) }); const result = await parseResponse(verified); if (!verified.ok || !result.confirmed) throw new Error(result.message || 'Payment verification failed'); verifiedPayment = { paymentStatus:'paid', transactionId:payment.razorpay_payment_id, razorpayOrderId:payment.razorpay_order_id }; resetPaymentState(); document.getElementById('orderForm').requestSubmit(); } catch (error) { paymentInProgress=false; buttons.forEach(item => { item.disabled=false; item.classList.remove('is-loading'); }); button.disabled=false; alert(error.message || 'Payment verification failed.'); } }, modal:{ ondismiss:()=>{ paymentInProgress=false; buttons.forEach(item => { item.disabled=false; item.classList.remove('is-loading'); }); button.disabled=false; } }, prefill:{ name:document.getElementById('custName').value, contact:document.getElementById('custPhone').value } }); razorpay.open(); } catch (error) { paymentInProgress=false; buttons.forEach(item => { item.disabled=false; item.classList.remove('is-loading'); }); button.disabled=false; alert(error.message || 'Payment could not be started.'); } }
+  function launchUPIPayment() { startRazorpayPayment(); }
+  function showUPIQR() {
+    if (!cart.length) return alert('Add a product before opening the payment QR.');
+    startRazorpayPayment('qr');
+  }
+  function closeUPIQR() { document.getElementById('qrOverlay').classList.remove('open'); }
+  function closeSuccessModal() { document.getElementById('successOverlay').classList.remove('open'); document.getElementById('successOverlay').setAttribute('aria-hidden','true'); syncOverlayScrollLock(); }
+  function showSuccessModal(orderId, total, paymentMethod, items) { const overlay=document.getElementById('successOverlay'); const breakdown=getCheckoutBreakdown(); document.getElementById('successOrderId').textContent=`Order ID: ${orderId}`; document.getElementById('successSummary').textContent=`${items.map(item=>`${item.name} × ${item.qty}`).join('\\n')}\\n\\nItem total: ₹${breakdown.subtotal}\\nBulk discount: −₹${breakdown.tierDiscount}\\nCoupon discount: −₹${breakdown.couponDiscount}\\nDelivery: FREE\\nGrand total: ₹${total}\\nPayment: ${paymentMethod}`; document.getElementById('successWhatsApp').onclick=()=>window.open(`https://wa.me/918447459316?text=${encodeURIComponent(`SK Graphics order ${orderId}\\nTotal: ₹${total}\\nPayment: ${paymentMethod}`)}`,'_blank','noopener,noreferrer'); overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); syncOverlayScrollLock(); }
+  async function submitOrder(e) {
+    e.preventDefault();
+    const name = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const address = document.getElementById('custAddress').value.trim();
+    const notes = document.getElementById('custNotes').value.trim();
+    const paymentMethod = document.getElementById('paymentMethod').value;
+    const total = getCartTotal();
+    if (!cart.length || !name || !phone || !address) return alert('Please complete your order details and add a product.');
+    if (paymentMethod !== 'COD' && !verifiedPayment) { await startRazorpayPayment(paymentMethod === 'Netbanking' ? 'netbanking' : 'upi'); return; }
+    if (orderSubmissionInProgress) return;
+    orderSubmissionInProgress = true;
+    let location = null;
+    if (navigator.geolocation) { try { const position = await new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 })); location = { latitude: position.coords.latitude, longitude: position.coords.longitude }; } catch (_) { console.warn('Location permission unavailable; saving address only.'); } }
+    const button = document.getElementById('orderSubmitBtn'); button.disabled = true; button.textContent = 'Saving order...';
+    try {
+      const response = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: { name, phone, address, location }, items: cart, subtotal: getCartSubtotal(), bulkDiscount:getCheckoutBreakdown().tierDiscount, claimToken:orderToken, total, couponCodes: couponApplied?.codes || [], couponApplied, notes: `${notes}${notes ? ' | ' : ''}Payment: ${paymentMethod}`,  paymentMethod, paymentStatus: verifiedPayment?.paymentStatus || (paymentMethod === 'COD' ? 'cod' : 'pending'), transactionId: verifiedPayment?.transactionId || '', razorpayOrderId: verifiedPayment?.razorpayOrderId || '', deliveryFee: 0, idempotencyKey: orderToken }) });
+      const result = await parseResponse(response); if (!response.ok) throw new Error(result.message || 'Could not save order');
+      showSuccessModal(result.orderId, total, paymentMethod, cart); const itemsList = cart.map(item => `${item.name} (Qty: ${item.qty}) - ₹${item.price * item.qty}${item.customization ? ` | Font: ${item.customization.fontStyle || 'Arial'} | Print text: ${item.customization.printText || 'None'} | Design upload: ${item.customization.hasDesign ? 'Yes' : 'No'} | Extra logo/photo: ${item.customization.addExtraAsset ? 'Yes' : 'No'}${item.customization.designFile ? ` | Design: ${item.customization.designFile}` : ''}${item.customization.extraAsset ? ` | Extra: ${window.location.origin}${item.customization.extraAsset}` : ''}` : ''}`).join('\\n'); const message = `*ORDER - SK GRAPHICS*\\n*Customer:* ${name}\\n*Phone:* ${phone}\\n*Address:* ${address}\\n*Items:*\\n${itemsList}\\n*Item total:* ₹${getCartSubtotal()}\\n*Bulk discount:* −₹${getCheckoutBreakdown().tierDiscount}\\n*Coupon:* ${couponApplied ? `−₹${couponApplied.discountAmount} (${couponApplied.codes.join(', ')})` : 'None'}\\n*Delivery:* FREE\\n*Total:* ₹${total}\\n*Payment:* ${paymentMethod}\\n*Notes:* ${notes || 'None'}`; window.open(`https://wa.me/918447459316?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer'); cart = []; couponApplied = null; verifiedPayment = null; orderToken = createOrderToken(); try { localStorage.setItem('sk_graphics_order_completed', 'true'); } catch (_) {} updateCartUI(); closeOrderModal(); document.getElementById('orderForm').reset(); updatePaymentPanel(); updateFirstOrderBadge();
+    } catch (error) { alert(error.message || 'Could not save order. Please try again.'); }
+    finally { orderSubmissionInProgress = false; button.disabled = false; button.textContent = 'Submit Order'; }
+  }
+
+  initProductSearch();
+  updateFirstOrderBadge();
+
+  /* Driver GPS sync hook (admin/driver phone connection) */
+  function updateDriverLocation(lat, lng) {
+    // Realtime driver update hook (WebSocket / Socket.io / Firebase)
+  }
+
+  (() => {
+    const panel = document.getElementById('supportChatPanel');
+    const toggle = document.getElementById('supportChatToggle');
+    const headerTrigger = document.getElementById('supportChatHeaderOpen');
+    const closeButton = document.getElementById('supportChatClose');
+    const log = document.getElementById('supportChatLog');
+    const orderForm = document.getElementById('supportOrderForm');
+    const phoneInput = document.getElementById('supportOrderPhone');
+    const orderStatus = document.getElementById('supportOrderStatus');
+    const submitButton = document.getElementById('supportOrderSubmit');
+    const askForm = document.getElementById('supportAskForm');
+    const askInput = document.getElementById('supportQuestion');
+    const askStatus = document.getElementById('supportAskStatus');
+    const askButton = document.getElementById('supportAskSubmit');
+
+    function addSupportMessage(text, role = 'assistant') {
+      const message = document.createElement('div');
+      message.className = `support-chat-message${role === 'user' ? ' is-user' : ''}`;
+      message.textContent = text;
+      log.appendChild(message);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    let activeTrigger = toggle;
+    function setChatOpen(open, trigger = toggle) {
+      if (open) activeTrigger = trigger;
+      panel.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      headerTrigger?.setAttribute('aria-expanded', String(open));
+      if (open) closeButton.focus();
+      else activeTrigger.focus();
+    }
+
+    addSupportMessage('Hello! I can help with order status, printing options, delivery timing, and artwork. Choose an option below to get started.');
+    if (new URLSearchParams(window.location.search).get('support') === 'ai') setChatOpen(true, toggle);
+
+    toggle.addEventListener('click', () => setChatOpen(panel.hidden, toggle));
+    headerTrigger?.addEventListener('click', () => setChatOpen(true, headerTrigger));
+    closeButton.addEventListener('click', () => setChatOpen(false));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !panel.hidden) setChatOpen(false);
+    });
+
+    panel.querySelector('.support-chat-menu').addEventListener('click', (event) => {
+      const button = event.target.closest('[data-support-action]');
+      if (!button) return;
+      const action = button.dataset.supportAction;
+      if (action === 'track') {
+        addSupportMessage('Track an order', 'user');
+        addSupportMessage('Enter the phone number used at checkout. I’ll show the latest order status and a short order summary.');
+        orderForm.hidden = false;
+        orderStatus.textContent = '';
+        phoneInput.focus();
+      } else if (action === 'products') {
+        addSupportMessage('Products & printing', 'user');
+        addSupportMessage('We offer custom business cards, flyers, brochures, banners, stickers, packaging, apparel, mugs, and more. Browse the product catalog on this page to see available options.');
+      } else if (action === 'delivery') {
+        addSupportMessage('Delivery & timing', 'user');
+        addSupportMessage('Turnaround and delivery depend on the product, quantity, and approval of the final artwork. For an exact estimate, call or email our team using the contact links below.');
+      } else if (action === 'artwork') {
+        addSupportMessage('Artwork help', 'user');
+        addSupportMessage('For crisp printing, send high-resolution artwork and carefully check text, colors, and sizing before approval. If you need help preparing a file, contact our team and tell us which product you’re ordering.');
+      }
+    });
+
+    askForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const message = askInput.value.trim();
+      if (!message) return;
+      addSupportMessage(message, 'user');
+      askInput.value = '';
+      askButton.disabled = true;
+      askStatus.textContent = 'Checking that for you…';
+      try {
+        const response = await fetch('/api/support/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message }) });
+        const result = await parseResponse(response);
+        if (!response.ok || !result.ok) throw new Error(result.message || 'AI support is temporarily unavailable.');
+        addSupportMessage(result.reply);
+        askStatus.textContent = '';
+      } catch (error) {
+        askStatus.textContent = error.message || 'AI support is temporarily unavailable. Please use WhatsApp or call our team.';
+      } finally {
+        askButton.disabled = false;
+      }
+    });
+
+    orderForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const phone = phoneInput.value.trim();
+      const digits = phone.replace(/\D/g, '');
+      if (digits.length < 10 || digits.length > 15) {
+        orderStatus.textContent = 'Enter a valid phone number with at least 10 digits.';
+        phoneInput.focus();
+        return;
+      }
+      submitButton.disabled = true;
+      orderStatus.textContent = 'Checking your recent orders…';
+      try {
+        const response = await fetch('/api/support/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || 'Could not check order status.');
+        addSupportMessage('Check order status', 'user');
+        if (!result.orders.length) {
+          addSupportMessage('I couldn’t find an order with that phone number. Check the number used at checkout, or call our team for help.');
+        } else {
+          addSupportMessage(`I found ${result.orders.length} recent ${result.orders.length === 1 ? 'order' : 'orders'}. Order progress is shown below. Courier tracking IDs aren’t available in this order record.`);
+          const statusLabels = { received: 'Order received', processing: 'In production / packing', completed: 'Marked complete' };
+          result.orders.forEach((order) => {
+            const date = order.createdAt ? new Date(order.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Date unavailable';
+            const items = (order.items || []).map((item) => `${item.name} × ${item.quantity}`).join(', ') || 'Order details unavailable';
+            const total = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(order.total);
+            addSupportMessage(`Order #${order.id} · ${date}\nStatus: ${statusLabels[order.status] || 'Order received'}\n${items}\nTotal: ${total}`);
+          });
+        }
+        orderStatus.textContent = '';
+        phoneInput.value = '';
+      } catch (error) {
+        orderStatus.textContent = error.message || 'Could not check order status. Please try again.';
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  })();
+</script>
+</body>
+</html>

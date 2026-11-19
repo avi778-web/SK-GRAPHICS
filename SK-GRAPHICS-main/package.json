@@ -1,0 +1,36 @@
+{
+  "name": "sk-graphics-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "preinstall": "powershell -ExecutionPolicy Bypass -File ./fix-npm-cache.ps1",
+    "dev": "node server.js",
+    "build:assets": "esbuild src/blob-client-entry.js --bundle --format=esm --platform=browser --target=es2020 --outfile=assets/blob-client.js --minify",
+    "test": "node --check server.js && node --check src/app.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@vercel/blob": "^2.9.0",
+    "ai": "^7.0.169",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "ejs": "^7.0.1",
+    "express": "^5.2.1",
+    "mongoose": "9.12.1",
+    "razorpay": "^2.9.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "overrides": {
+    "@vercel/oidc": {
+      "@vercel/cli-config": "0.3.8"
+    }
+  }
+}
