@@ -1,11 +1,22 @@
 {
-  "version": 2,
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "{views,assets,src,node_modules/mongoose/lib}/**"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "app": {
+      "root": "SK-GRAPHICS-main",
+      "framework": "express",
+      "bindings": [
+        { "type": "service", "service": "labzeck-main", "format": "url", "env": "LABZECK_URL" }
+      ]
+    },
+    "labzeck-main": {
+      "root": "SK-GRAPHICS-main/Labzeck-main",
+      "framework": "express"
     }
   },
-  "routes": [
-    { "src": "/(.*)", "dest": "/api/index.js" }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": { "service": "app" }
+    }
   ]
 }
