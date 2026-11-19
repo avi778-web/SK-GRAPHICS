@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "app": {
-      "root": "SK-GRAPHICS-main",
+      "root": ".",
       "framework": "express",
       "bindings": [
         { "type": "service", "service": "labzeck-main", "format": "url", "env": "LABZECK_URL" }
